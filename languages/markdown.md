@@ -31,8 +31,11 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Strikethrough | \~\~TEXT\~\~ | <strike>TEXT</strike> |
 | Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
 
-### Example codes
-```python
+
+## Examples
+
+### Highlighted codes
+```python:python code
 {
     print("hello, world!")
 }
