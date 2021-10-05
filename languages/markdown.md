@@ -29,7 +29,7 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Linking to Heading ID | \[TEXT]\(#CUSTOM-ID) | <a href="#custom-id">TEXT</a> |
 | Definition | TEXT<br>\: TEXT | <dl><dt>TEXT</dt><dd>TEXT</dd></dl> |
 | Strikethrough | \~\~TEXT\~\~ | <strike>TEXT</strike> |
-| Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <div><input type="checkbox" checked><label>TEXT</label></div> |
+| Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
 
 [^1]: Footnote
 
