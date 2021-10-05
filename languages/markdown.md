@@ -1,4 +1,4 @@
-## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/){#custom-id}
+## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ### [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 Elements supported by all markdown applications
@@ -25,8 +25,8 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
 | Fenced Code Block | \'''\{LANGUAGE_NAME} TEXT \''' | <codeblock>TEXT</codeblock> |
 | Footnote | TEXT \[^1] | TEXT [^1] |
-| Heading ID | \# TEXT \{#CUSTOM-ID} | <h1>TEXT</h1> |
-| Linking to Heading ID | \[TEXT]\(#CUSTOM-ID) | <a href="custom-id">TEXT</a> |
+| Heading ID | \# TEXT \{#CUSTOM-ID} | <h1 id="custom-id">TEXT</h1> |
+| Linking to Heading ID | \[TEXT]\(#CUSTOM-ID) | <a href="#custom-id">TEXT</a> |
 
 [^1]: Footnote
 
