@@ -52,8 +52,6 @@ console.log("hello, world!");
 ### Math equations
 Written equivalent to TeX notation
 
-| Syntax | Code |
-| --- | --- |
-| Equation | \```math<br>\e^{i\pi}=-1 \``` |
-
-![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1)
+| Syntax | Code | View |
+| --- | --- | --- |
+| Equation | \```math<br>\e^{i\pi}=-1 \``` | ![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1) |
