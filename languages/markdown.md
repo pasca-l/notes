@@ -11,7 +11,7 @@ Elements supported by all markdown applications
 | Blockquote | \>TEXT | <blockquote>TEXT</blockquote> |
 | Ordered List | 1\.TEXT<br>2\.TEXT<br>3\.TEXT | <ol><li>TEXT</li><li>TEXT</li><li>TEXT</li></ol> |
 | Unordered List | \-TEXT<br>\-TEXT<br>\-TEXT | <ul><li>TEXT</li><li>TEXT</li><li>TEXT</li></ul> |
-| Code | \'TEXT\' | <code>TEXT</code> |
+| Code | \`TEXT\` | <code>TEXT</code> |
 | Horizontal Rule | \--- | <hr> |
 | Link | \[TEXT\]\(https://www.markdownguide.org\) | [TEXT](https://www.markdownguide.org) |
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
@@ -57,3 +57,10 @@ Written equivalent to TeX notation
 | Equation | \```math<br>\e^{i\pi}=-1 \``` | ![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1) [^eqongithub] |
 
 [^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead
+
+---
+
+### Preview on Atom
+
+`[control]` + `[shift]` + `[M]`
+opens the core package "Markdown Preview" on Atom
