@@ -54,4 +54,4 @@ Written equivalent to TeX notation
 
 | Syntax | Code | View |
 | --- | --- | --- |
-| Equation | \```math<br>\e^{i\pi}=-1 \``` | ```math<br>e^{i\pi}=-1``` |
+| Equation | \```math<br>\e^{i\pi}=-1 \``` | $$ e^{i\pi}=-1 $$ |
