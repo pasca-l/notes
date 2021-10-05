@@ -1,14 +1,14 @@
 ## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-### Basic Syntax
+### [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 Elements supported by all markdown applications
 
 | Syntax | Code | View |
-| ----------- | ----------- | ----------- |
-| Header | #TEXT, ##TEXT, ###TEXT | <h1>TEXT</h1> <h2>TEXT</h2> <h3>TEXT</h3> |
+| --- | --- | --- |
+| Header | # TEXT -> ###### TEXT | <h1>TEXT</h1> <h6>TEXT</h6> |
 | Bold | \*\*TEXT\*\* | <b>TEXT</b> |
 | Italic | \*TEXT\* | <i>TEXT</i> |
-| Blockquote| \>TEXT | <blockquote>TEXT</blockquote> |
+| Blockquote | \>TEXT | <blockquote>TEXT</blockquote> |
 | Ordered List | 1\.TEXT<br>2\.TEXT<br>3\.TEXT | <ol><li>TEXT</li><li>TEXT</li><li>TEXT</li></ol> |
 | Unordered List | \-TEXT<br>\-TEXT<br>\-TEXT | <ul><li>TEXT</li><li>TEXT</li><li>TEXT</li></ul> |
 | Code | \'TEXT\' | <code>TEXT</code> |
@@ -17,29 +17,12 @@ Elements supported by all markdown applications
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
 
-## Extended Syntax
+## [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 Elements extended from basic syntax, not supported by all markdown applications
 
-
-### Code
-
-`code`
-
-### Horizontal Rule
-
----
-
-### Link
-
-[Markdown Guide](https://www.markdownguide.org)
-
-### Image
-
-![alt text](https://www.markdownguide.org/assets/images/tux.png)
-
-## Extended Syntax
-
-These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+| Syntax | Code | View |
+| --- | --- | --- |
+| Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
 
 ### Table
 
