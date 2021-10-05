@@ -54,6 +54,6 @@ Written equivalent to TeX notation
 
 | Syntax | Code | View |
 | --- | --- | --- |
-| Equation | \```math<br>\e^{i\pi}=-1 \``` | ![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1) [^github equation] |
+| Equation | \```math<br>\e^{i\pi}=-1 \``` | ![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1) [^eqongithub] |
 
-[^github equation]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead
+[^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead
