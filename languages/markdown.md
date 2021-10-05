@@ -35,7 +35,8 @@ Elements extended from basic syntax, not supported by all markdown applications
 ## Examples
 
 ### Highlighted codes
-```python:python code
+
+```python:python_code
 {
     print("hello, world!")
 }
