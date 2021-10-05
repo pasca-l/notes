@@ -1,20 +1,10 @@
 ## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-| Syntax | Code | View |
-| ----------- | ----------- | ----------- |
-| Header | '''#''', '##', '###' | # h1 |
+| Syntax | Code |
+| ----------- | ----------- |
+| Header | #, ##, ### |
+| Bold | **TEXT** |
 
-## Basic Syntax
-
-These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
-
-### Heading
-
-# H1
-## H2
-### H3
-
-### Bold
 
 **bold text**
 
