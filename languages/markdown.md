@@ -5,13 +5,9 @@
 | Header | #TEXT, ##TEXT, ###TEXT | <h1>TEXT</h1> <h2>TEXT</h2> <h3>TEXT</h3> |
 | Bold | \*\*TEXT\*\* | <b>TEXT</b> |
 | Italic | \*TEXT\* | <i>TEXT</i> |
-| Blockquote| \>TEXT | >TEXT |
+| Blockquote| \>TEXT | <blockquote>TEXT</blockquote> |
+| Ordered List | 1\.TEXT<br>2\.TEXT<br>3\.TEXT | <ol><li>TEXT</li><li>TEXT</li><li>TEXT</li></ol> |
 
-
-
-### Blockquote
-
-> blockquote
 
 ### Ordered List
 
