@@ -3,7 +3,7 @@
 | Syntax | Code |
 | ----------- | ----------- |
 | Header | #, ##, ### |
-| Bold | **TEXT** |
+| Bold | '**TEXT**' |
 
 
 **bold text**
