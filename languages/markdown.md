@@ -1,9 +1,9 @@
 ## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-| Syntax | Code |
-| ----------- | ----------- |
-| Header | #, ##, ### |
-| Bold | '**TEXT**' |
+| Syntax | Code | View |
+| ----------- | ----------- | ----------- |
+| Header | #, ##, ### | <h1>TEXT<h1> |
+| Bold | <p>**TEXT**</p> |  |
 
 
 **bold text**
