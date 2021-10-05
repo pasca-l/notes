@@ -23,13 +23,8 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Syntax | Code | View |
 | --- | --- | --- |
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
+| Fenced Code Block | \''' TEXT \''' | '''TEXT''' |
 
-### Table
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
 
 ### Fenced Code Block
 
