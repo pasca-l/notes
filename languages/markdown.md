@@ -17,7 +17,7 @@ Elements supported by all markdown applications
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
 
-## [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
+### [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 Elements extended from basic syntax, not supported by all markdown applications
 
 | Syntax | Code | View |
@@ -32,19 +32,3 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
 
 [^1]: Footnote
-
-
-### Definition List
-
-term
-: definition
-
-### Strikethrough
-
-~~The world is flat.~~
-
-### Task List
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
