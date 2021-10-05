@@ -1,5 +1,8 @@
 ## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
+### Basic Syntax
+Elements supported by all markdown applications
+
 | Syntax | Code | View |
 | ----------- | ----------- | ----------- |
 | Header | #TEXT, ##TEXT, ###TEXT | <h1>TEXT</h1> <h2>TEXT</h2> <h3>TEXT</h3> |
@@ -7,19 +10,16 @@
 | Italic | \*TEXT\* | <i>TEXT</i> |
 | Blockquote| \>TEXT | <blockquote>TEXT</blockquote> |
 | Ordered List | 1\.TEXT<br>2\.TEXT<br>3\.TEXT | <ol><li>TEXT</li><li>TEXT</li><li>TEXT</li></ol> |
+| Unordered List | \-TEXT<br>\-TEXT<br>\-TEXT | <ul><li>TEXT</li><li>TEXT</li><li>TEXT</li></ul> |
+| Code | \'TEXT\' | <code>TEXT</code> |
+| Horizontal Rule | \--- | --- |
+| Link | \[TEXT\]\(https://www.markdownguide.org\) | [TEXT](https://www.markdownguide.org) |
+| Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
 
-### Ordered List
+## Extended Syntax
+Elements extended from basic syntax, not supported by all markdown applications
 
-1. First item
-2. Second item
-3. Third item
-
-### Unordered List
-
-- First item
-- Second item
-- Third item
 
 ### Code
 
