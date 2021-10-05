@@ -57,5 +57,5 @@ Written equivalent to TeX notation
 | Equation | \```math<br>\e^{i\pi}=-1 \``` |
 
 ```math
-\e^{i\pi}=-1
+e^{i\pi}=-1
 ```
