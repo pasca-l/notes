@@ -23,12 +23,17 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Syntax | Code | View |
 | --- | --- | --- |
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
-| Fenced Code Block | \'''\{LANGUAGE_NAME} TEXT \''' | <codeblock>TEXT</codeblock> |
+| Fenced Code Block | \'''\{LANGUAGE_NAME} TEXT \''' |  |
 | Footnote | TEXT \[^1] | TEXT [^1] |
 | Heading ID | \# TEXT \{#CUSTOM-ID} | <h1 id="custom-id">TEXT</h1> |
 | Linking to Heading ID | \[TEXT]\(#CUSTOM-ID) | <a href="#custom-id">TEXT</a> |
 | Definition | TEXT<br>\: TEXT | <dl><dt>TEXT</dt><dd>TEXT</dd></dl> |
 | Strikethrough | \~\~TEXT\~\~ | <strike>TEXT</strike> |
 | Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
+
+### Example codes
+'''python
+print("hello, world!")
+'''
 
 [^1]: Footnote
