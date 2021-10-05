@@ -3,7 +3,7 @@
 | Syntax | Code | View |
 | ----------- | ----------- | ----------- |
 | Header | #, ##, ### | <h1>TEXT<h1> |
-| Bold | <p>**TEXT**</p> |  |
+| Bold | \*\*TEXT\*\* |  |
 
 
 **bold text**
