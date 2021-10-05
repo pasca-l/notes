@@ -23,9 +23,10 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Syntax | Code | View |
 | --- | --- | --- |
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
-| Fenced Code Block | \''' TEXT \''' | <codeblock>{
-    TEXT
-    }</codeblock> |
+| Fenced Code Block | \''' TEXT \''' | <codeblock>TEXT</codeblock> |
+| Footnote | TEXT \[^1] | TEXT [^1] |
+
+[^1]: Footnote
 
 
 ### Fenced Code Block
@@ -38,11 +39,6 @@ Elements extended from basic syntax, not supported by all markdown applications
 }
 ```
 
-### Footnote
-
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote.
 
 ### Heading ID
 
