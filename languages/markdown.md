@@ -23,8 +23,10 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Syntax | Code | View |
 | --- | --- | --- |
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
-| Fenced Code Block | \''' TEXT \''' | <codeblock>TEXT</codeblock> |
+| Fenced Code Block | \'''\{LANGUAGE_NAME} TEXT \''' | <codeblock>TEXT</codeblock> |
 | Footnote | TEXT \[^1] | TEXT [^1] |
+| Heading ID | \# TEXT \{#CUSTOM-ID} | <h1 id="custom-id">TEXT</h1> |
+| Linking to Heading ID | \[TEXT]\(#CUSTOM-ID) | <a href="custom-id">TEXT</a> |
 
 [^1]: Footnote
 
@@ -39,6 +41,11 @@ Elements extended from basic syntax, not supported by all markdown applications
 }
 ```
 
+### Footnote
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
 
 ### Heading ID
 
