@@ -62,5 +62,5 @@ Written equivalent to TeX notation
 
 ### Preview on Atom
 
-`[control]` + `[shift]` + `[M]`
+`control` + `shift` + `M`
 opens the core package "Markdown Preview" on Atom
