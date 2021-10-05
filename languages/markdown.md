@@ -3,14 +3,11 @@
 | Syntax | Code | View |
 | ----------- | ----------- | ----------- |
 | Header | #TEXT, ##TEXT, ###TEXT | <h1>TEXT</h1> <h2>TEXT</h2> <h3>TEXT</h3> |
-| Bold | \*\*TEXT\*\* |  |
+| Bold | \*\*TEXT\*\* | <b>TEXT</b> |
+| Italic | \*TEXT\* | <i>TEXT</i> |
+| Blockquote| \>TEXT | <blockquote>TEXT</blockquote> |
 
 
-**bold text**
-
-### Italic
-
-*italicized text*
 
 ### Blockquote
 
