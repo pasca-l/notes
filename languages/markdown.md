@@ -31,6 +31,7 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Strikethrough | \~\~TEXT\~\~ | <strike>TEXT</strike> |
 | Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
 
+[^1]: Footnote
 
 ---
 
@@ -46,4 +47,6 @@ javascript code
 console.log("hello, world!");
 ```
 
-[^1]: Footnote
+---
+
+### Math equations
