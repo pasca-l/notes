@@ -56,6 +56,4 @@ Written equivalent to TeX notation
 | --- | --- |
 | Equation | \```math<br>\e^{i\pi}=-1 \``` |
 
-```math
-e^{i\pi}=-1
-```
+![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1)
