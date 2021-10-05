@@ -23,7 +23,9 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Syntax | Code | View |
 | --- | --- | --- |
 | Table | \| TEXT \|<br>\| --- \|<br>\| TEXT \| | |
-| Fenced Code Block | \''' TEXT \''' | <codeblock>TEXT</codeblock> |
+| Fenced Code Block | \''' TEXT \''' | <codeblock>{
+    TEXT
+    }</codeblock> |
 
 
 ### Fenced Code Block
