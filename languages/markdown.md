@@ -32,15 +32,18 @@ Elements extended from basic syntax, not supported by all markdown applications
 | Task List | \- \[x] TEXT<br>\- \[ ] TEXT | <ul><li>[x] TEXT</li><li>[ ] TEXT</li></ul> |
 
 
-## Examples
+---
 
 ### Highlighted codes
 
 python code
 ```python
-{
-    print("hello, world!")
-}
+print("hello, world!")
+```
+
+javascript code
+```javascript
+console.log("hello, world!");
 ```
 
 [^1]: Footnote
