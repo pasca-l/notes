@@ -5,7 +5,7 @@ Elements supported by all markdown applications
 
 | Syntax | Code | View |
 | --- | --- | --- |
-| Header | # TEXT -> ###### TEXT | <h1>TEXT</h1> <h6>TEXT</h6> |
+| Header | # TEXT <br> ###### TEXT | <h1>TEXT</h1> <h6>TEXT</h6> |
 | Bold | \*\*TEXT\*\* | <b>TEXT</b> |
 | Italic | \*TEXT\* | <i>TEXT</i> |
 | Blockquote | \>TEXT | <blockquote>TEXT</blockquote> |
