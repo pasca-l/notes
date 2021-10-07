@@ -1,7 +1,7 @@
 ## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ### [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
-Elements supported by all markdown applications
+Elements supported by all markdown applications.
 
 | Syntax | Code | View |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ Elements supported by all markdown applications
 
 
 ### [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
-Elements extended from basic syntax, not supported by all markdown applications
+Elements extended from basic syntax, not supported by all markdown applications.
 
 | Syntax | Code | View |
 | --- | --- | --- |
@@ -50,17 +50,17 @@ console.log("hello, world!");
 ---
 
 ### Math equations
-Written equivalent to TeX notation
+Written equivalent to TeX notation.
 
 | Syntax | Code | View |
 | --- | --- | --- |
 | Equation | \```math<br>\e^{i\pi}=-1 \``` | ![e^{i\pi}=-1](https://latex.codecogs.com/gif.latex?e^{i\pi}=-1) [^eqongithub] |
 
-[^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead
+[^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead.
 
 ---
 
 ### Preview on Atom
 
 `control` + `shift` + `M`
-opens the core package "Markdown Preview" on Atom
+opens the core package "Markdown Preview" on Atom.
