@@ -1,7 +1,5 @@
 ## Git command Cheat Sheet
 
----
-
 ### Setting `.gitignore` after file in repository
 Get certain file or directory out of repository.
 ```
