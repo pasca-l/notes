@@ -1,5 +1,13 @@
 ## Git command Cheat Sheet
 
+### Change message after commit
+Changing commit message after a given commit.
+```
+$ git commit --amend -m "COMMENT"
+```
+
+---
+
 ### Setting `.gitignore` after file in repository
 Get certain file or directory out of repository.
 ```
