@@ -8,7 +8,7 @@ $ git commit --amend -m "COMMENT"
 
 ---
 
-### Setting `.gitignore` after file in repository
+### Applying `.gitignore` afterwards
 Get certain file or directory out of repository.
 ```
 $ git rm --cached (-r) FILE/(DIRECTORY)
