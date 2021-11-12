@@ -2,13 +2,13 @@
 
 ### Zsh
 Aliases put in `~/.zshrc`.
-```zsh:~/.zshrc
+```sh
 alias "ALIAS"="COMMAND"
 ```
 
 To apply change:
 1. Restart zsh.
 2. Reflect settings by command.
-```zsh
+```sh
 source ~/.zshrc
 ```
