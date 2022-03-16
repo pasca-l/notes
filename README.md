@@ -1,4 +1,4 @@
-## notes
+# notes
 This repository holds my notes, to reference and update while working with my projects and learnings.
 
 Directories are listed below:
