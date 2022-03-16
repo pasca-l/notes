@@ -1,6 +1,6 @@
-## [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+# [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
-### [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+## [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 Elements supported by all markdown applications.
 
 | Syntax | Code | View |
@@ -17,7 +17,7 @@ Elements supported by all markdown applications.
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
 
-### [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
+## [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 Elements extended from basic syntax, not supported by all markdown applications.
 
 | Syntax | Code | View |
@@ -33,9 +33,8 @@ Elements extended from basic syntax, not supported by all markdown applications.
 
 [^1]: Footnote
 
----
 
-### Highlighted codes
+## Highlighted codes
 
 python code
 ```python
@@ -47,9 +46,8 @@ javascript code
 console.log("hello, world!");
 ```
 
----
 
-### Math equations
+## Math equations
 Written equivalent to TeX notation.
 
 | Syntax | Code | View |
@@ -58,9 +56,8 @@ Written equivalent to TeX notation.
 
 [^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead.
 
----
 
-### Preview on Atom
+## Preview on Atom
 
 `control` + `shift` + `M`
 opens the core package "Markdown Preview" on Atom.

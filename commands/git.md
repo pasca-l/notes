@@ -1,14 +1,13 @@
-## Git command Cheat Sheet
+# Git command Cheat Sheet
 
-### Change message after commit
+## Change message after commit
 Changing commit message after a given commit.
 ```
 $ git commit --amend -m "COMMENT"
 ```
 
----
 
-### Applying `.gitignore` afterwards
+## Applying `.gitignore` afterwards
 Get certain file or directory out of repository.
 ```
 $ git rm --cached (-r) FILE/(DIRECTORY)
@@ -20,9 +19,8 @@ $ git add .
 $ git commit -m "COMMENT"
 ```
 
----
 
-### Force local repository update (on `main` branch)
+## Force local repository update (on `main` branch)
 Fetch latest version of remote repository.
 ```
 $ git fetch origin main
