@@ -6,10 +6,20 @@
 $ flutter pub add firebase_core
 ```
 
-2. Install FlutterFire from `flutterfire_cli`, to automate environment settings.
+2. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
+For Firebase CLI:
 ```
-$ dart pub global activate flutterfire_cli # FlutterFire CLI installation
-$ flutterfire configure # must run to reconfigure as well
+$ npm install -g firebase-tools
+```
+
+For FlutterFire CLI:
+```
+$ dart pub global activate flutterfire_cli
+```
+
+Configuration of FlutterFire (must run to reconfigure as well):
+```
+$ flutterfire configure
 ```
 'firebase_options.dart' will be created automatically.
 
@@ -19,6 +29,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
-	WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 ```
+
+## Adding Firebase Authentication
