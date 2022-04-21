@@ -1,30 +1,20 @@
 # Flutter Cheat Sheet
 
 ## Adding Firebase to application
-### 1. Install `firebase_core` plugin on project root.
+1. Install `firebase_core` plugin on project root.
 ```
 $ flutter pub add firebase_core
 ```
 
-### 2. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
-
-For Firebase CLI:
+2. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
 ```
-$ npm install -g firebase-tools
-```
-
-For FlutterFire CLI:
-```
-$ dart pub global activate flutterfire_cli
-```
-
-Configuration of FlutterFire (must run to reconfigure as well):
-```
-$ flutterfire configure
+$ npm install -g firebase-tools # Firebase CLI
+$ dart pub global activate flutterfire_cli # FlutterFire CLI
+$ flutterfire configure # FlutterFire configuration (must run to reconfigure too)
 ```
 `firebase_options.dart` will be created automatically.
 
-### 3. Importing and using FlutterFire.
+3. Importing and using FlutterFire.
 ```dart
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
