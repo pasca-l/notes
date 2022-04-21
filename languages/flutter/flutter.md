@@ -7,6 +7,7 @@ $ flutter pub add firebase_core
 ```
 
 2. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
+
 For Firebase CLI:
 ```
 $ npm install -g firebase-tools
@@ -21,7 +22,7 @@ Configuration of FlutterFire (must run to reconfigure as well):
 ```
 $ flutterfire configure
 ```
-'firebase_options.dart' will be created automatically.
+`firebase_options.dart` will be created automatically.
 
 3. Importing and using FlutterFire.
 ```dart
@@ -38,3 +39,13 @@ void main() async {
 ```
 
 ## Adding Firebase Authentication
+1. Install `firebase_auth` plugin on project root.
+```
+$ flutter pub add firebase_auth
+$ flutter run # rebuild Flutter app
+```
+
+2. Importing plugin.
+```dart
+import 'package:firebase_auth/firebase_auth.dart';
+```
