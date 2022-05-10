@@ -1,41 +1,23 @@
 # Flutter Cheat Sheet
 
-## Adding Firebase to application
-1. Install `firebase_core` plugin on project root.
+## Installing Flutter
+Use `flutter doctor` command to check software prerequisite.
 ```
-$ flutter pub add firebase_core
-```
-
-2. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
-```
-$ npm install -g firebase-tools # Firebase CLI
-$ dart pub global activate flutterfire_cli # FlutterFire CLI
-$ flutterfire configure # FlutterFire configuration (must run to reconfigure too)
-```
-`firebase_options.dart` will be created automatically.
-
-3. Importing and using FlutterFire.
-```dart
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(MyApp());
-}
+$ flutter doctor
 ```
 
-## Adding Firebase Authentication
-1. Install `firebase_auth` plugin on project root.
+Doctor summary shows
 ```
-$ flutter pub add firebase_auth
-$ flutter run # rebuild Flutter app
-```
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 2.10.3, on macOS 11.4 20F71 darwin-x64, locale
+    ja-JP)
+[✓] Android toolchain - develop for Android devices (Android SDK version
+    32.1.0-rc1)
+[✓] Xcode - develop for iOS and macOS (Xcode 13.2.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2021.1)
+[✓] Connected device (2 available)
+[✓] HTTP Host Availability
 
-2. Importing plugin.
-```dart
-import 'package:firebase_auth/firebase_auth.dart';
+• No issues found!
 ```
