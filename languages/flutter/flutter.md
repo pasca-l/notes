@@ -40,3 +40,8 @@ com.apple.CoreSimulator.SimRuntime.iOS-15-2 (simulator)
 Chrome (web)       • chrome                               • web-javascript •
 Google Chrome 101.0.4951.54
 ```
+
+Select device and run a Flutter app.
+```
+$ flutter -d DEVICE_NAME
+```
