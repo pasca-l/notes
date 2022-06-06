@@ -1,4 +1,5 @@
-# FlutterFire Cheat Sheet
+# FlutterFire Cheat Sheet [^overview]
+[^overview]: [FlutterFire Overview website](https://firebase.flutter.dev/docs/overview/)
 
 ## Adding Firebase to application
 1. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
@@ -32,10 +33,9 @@ void main() async {
 ```
 
 ## Adding Firebase Authentication
-1. Install `firebase_auth` plugin on project root.
+1. Install `firebase_auth` plugin on project root. Rebuild app using `flutter run`.
 ```
 $ flutter pub add firebase_auth
-$ flutter run # rebuild Flutter app
 ```
 
 2. Importing plugin.
