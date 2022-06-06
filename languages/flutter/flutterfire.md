@@ -19,12 +19,13 @@ $ flutterfire configure
 ```
 $ flutter pub add firebase_core
 ```
-Within `lib/main.dart`, import the Firebase core plugin and configuration file created in the previous step. Initialize Firebase using `DefaultFirebaseOptions` (exported from configuration file).
+Within `lib/main.dart`, import the Firebase core plugin and configuration file created in the previous step. Ensure `WidgetsFlutterBinding` is initialized, and then initialize Firebase using `DefaultFirebaseOptions` (exported from configuration file).
 ```dart
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -36,6 +37,7 @@ void main() async {
 1. Install `firebase_auth` plugin on project root. Rebuild app using `flutter run`.
 ```
 $ flutter pub add firebase_auth
+$ flutter run
 ```
 
 2. Importing plugin.
