@@ -43,5 +43,5 @@ Google Chrome 101.0.4951.54
 
 Select device and run a Flutter app.
 ```
-$ flutter -d DEVICE_NAME
+$ flutter run -d DEVICE_NAME
 ```
