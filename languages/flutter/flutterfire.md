@@ -44,3 +44,15 @@ $ flutter run
 ```dart
 import 'package:firebase_auth/firebase_auth.dart';
 ```
+
+## Adding Cloud Firestore
+1. Install `cloud_firestore` plugin on project root. Rebuild app using `flutter run`.
+```
+$ flutter pub add cloud_firestore
+$ flutter run
+```
+
+2. Importing plugin.
+```dart
+import 'package:firebase_auth/cloud_firestore.dart';
+```
