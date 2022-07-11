@@ -54,5 +54,5 @@ $ flutter run
 
 2. Importing plugin.
 ```dart
-import 'package:firebase_auth/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 ```
