@@ -8,14 +8,18 @@ $ npm install -g firebase-tools # Firebase CLI
 $ dart pub global activate flutterfire_cli # FlutterFire CLI
 ```
 
-2. Login to existing Firebase account, and configure the Flutter app to connect to Firebase.
+2. Login to existing Firebase account.
 ```
 $ firebase login
+```
+
+3. After logged in, configure the Flutter app to connect to Firebase.
+```
 $ flutterfire configure
 ```
 `firebase_options.dart` will be created automatically.
 
-3. Install `firebase_core` plugin on project root.
+4. Install `firebase_core` plugin on project root.
 ```
 $ flutter pub add firebase_core
 ```
