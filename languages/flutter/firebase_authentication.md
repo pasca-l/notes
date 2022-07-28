@@ -1,6 +1,6 @@
 # Firebase Cheat Sheet
 
-## Password Authentication
+## Email and password authentication
 1. Create new password-based account by `createUserWithEmailAndPassword()`.
 ```dart
 try {
@@ -17,4 +17,33 @@ try {
 } catch (e) {
   print(e);
 }
+```
+
+2. Signin to an existing account by `signInWithEmailAndPassword()`
+```dart
+try {
+  final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+    email: emailAddress,
+    password: password
+  );
+} on FirebaseAuthException catch (e) {
+  if (e.code == 'user-not-found') {
+    print('No user found for that email.');
+  } else if (e.code == 'wrong-password') {
+    print('Wrong password provided for that user.');
+  }
+}
+```
+
+3. To logout, call `signOut()` (for instance, by the `VoidCallback` type).
+```dart
+() async {
+  await FirebaseAuth.instance.signOut();
+}
+```
+
+## Accessing authenticated user
+1. To get `User` class from the `FirebaseAuth.instance`, use the `currentUser` property.
+```dart
+User? user = FirebaseAuth.instance.currentUser;
 ```
