@@ -57,7 +57,7 @@ Written equivalent to TeX notation.
 [^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead.
 
 
-## Preview on Atom
+## Preview on VSCode
 
-`control` + `shift` + `M`
-opens the core package "Markdown Preview" on Atom.
+`command` + `shift` + `V`
+opens the preview on VSCode.
