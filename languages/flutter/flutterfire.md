@@ -4,8 +4,11 @@
 ## Adding Firebase to application
 1. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
 ```
-$ npm install -g firebase-tools # Firebase CLI
-$ dart pub global activate flutterfire_cli # FlutterFire CLI
+# Firebase CLI
+$ npm install -g firebase-tools
+
+# FlutterFire CLI
+$ dart pub global activate flutterfire_cli
 ```
 
 2. Login to existing Firebase account.
