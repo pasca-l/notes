@@ -1,0 +1,45 @@
+# Haskell Cheat Sheet
+
+## Installing Haskell [^installation]
+[^installation]: [Installing Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/#using-homebrew)
+1. Install Stack (using Homebrew).
+```
+$ brew install haskell-stack
+```
+
+## Using GHCi
+- Call GHCi, to use an interpreter. Prompt should change to `Prelude`
+```
+$ stack ghci
+Prelude>
+```
+
+- Load files either from the command line, or from the interpreter. When using `ghci` from command line, the file does not need to include `main` as for GHC.
+```
+$ stack ghci FILE
+```
+```
+Prelude> :l(oad) FILE
+```
+
+- Exiting GHCi.
+```
+Prelude> :q
+$
+```
+
+## Making a new project
+1. Create new template project.
+```
+$ stack new PROJECT_NAME
+```
+
+2. Build project, within the project directory.
+```
+$ stack build
+```
+
+3. Execute project.
+```
+$ stack exec PROJECT_NAME-exe
+```
