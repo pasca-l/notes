@@ -1,4 +1,9 @@
-# Haskell Cheat Sheet
+# Haskell Cheat Sheet <!-- omit in toc -->
+
+## Table of content <!-- omit in toc -->
+- [Installing Haskell \[^installation\]](#installing-haskell-installation)
+- [Using GHCi](#using-ghci)
+- [Making a new project](#making-a-new-project)
 
 ## Installing Haskell [^installation]
 [^installation]: [Installing Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/#using-homebrew)

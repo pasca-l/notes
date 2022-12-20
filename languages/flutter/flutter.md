@@ -1,4 +1,8 @@
-# Flutter Cheat Sheet
+# Flutter Cheat Sheet <!-- omit in toc -->
+
+## Table of Content <!-- omit in toc -->
+- [Preparing Flutter](#preparing-flutter)
+- [Starting emulation](#starting-emulation)
 
 ## Preparing Flutter
 Use `flutter doctor` command to check software prerequisite.

@@ -1,5 +1,10 @@
-# FlutterFire Cheat Sheet [^overview]
+# FlutterFire Cheat Sheet [^overview] <!-- omit in toc -->
 [^overview]: [FlutterFire Overview website](https://firebase.flutter.dev/docs/overview/)
+
+## Table of content <!-- omit in toc -->
+- [Adding Firebase to application](#adding-firebase-to-application)
+- [Adding Firebase Authentication](#adding-firebase-authentication)
+- [Adding Cloud Firestore](#adding-cloud-firestore)
 
 ## Adding Firebase to application
 1. Install Firebase CLI and FlutterFire CLI, for environment settings automation.
