@@ -1,4 +1,4 @@
-# React Cheat Sheet <!-- omit in toc -->
+# React.js Cheat Sheet <!-- omit in toc -->
 
 ## Table of Content <!-- omit in toc -->
 - [Using React](#using-react)
@@ -23,10 +23,14 @@ To use React, the following scripts are used (loaded externally from unpkg.com):
 </html>
 ```
 
-With React, the code can be written declaratively, instead of imperative JavaScript code.
+With React, the code can be written declaratively, instead of imperative JavaScript code. Note that, `<h1>...</h1>` inside `ReactDOM` method would give a syntax error, due to the code being JSX and not valid JavaScript. Therefore, for the browser to understand JSX, JavaScript compiler, such as Babel, needs to transform the JSX script.
 ```html
 <!-- index.html -->
 <!-- in <body> -->
+
+<!-- loading Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 <script type="text/jsx">
   const app = document.getElementById("app");
   ReactDOM.render(<h1>Hello World!</h1>, app);
