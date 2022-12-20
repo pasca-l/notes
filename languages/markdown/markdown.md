@@ -16,7 +16,6 @@ Elements supported by all markdown applications.
 | Link | \[TEXT\]\(https://www.markdownguide.org\) | [TEXT](https://www.markdownguide.org) |
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
-
 ## [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 Elements extended from basic syntax, not supported by all markdown applications.
 
@@ -33,9 +32,7 @@ Elements extended from basic syntax, not supported by all markdown applications.
 
 [^1]: Footnote
 
-
 ## Highlighted codes
-
 python code
 ```python
 print("hello, world!")
@@ -46,7 +43,6 @@ javascript code
 console.log("hello, world!");
 ```
 
-
 ## Math equations
 Written equivalent to TeX notation.
 
@@ -56,8 +52,6 @@ Written equivalent to TeX notation.
 
 [^eqongithub]: As GitHub does not render equations within code blocks, image from [CODECOGS](https://www.codecogs.com/latex/eqneditor.php) used instead.
 
-
 ## Preview on VSCode
-
 `command` + `shift` + `V`
 opens the preview on VSCode.

@@ -8,6 +8,14 @@
 - [Force local repository update (on `main` branch)](#force-local-repository-update-on-main-branch)
 
 ## Installing git command
+- On Ubuntu
+```
+$ apt-get install git
+```
+- Using Homebrew
+```
+$ brew install git
+```
 
 ## Change message after commit
 Changing commit message after a given commit.

@@ -7,8 +7,8 @@ alias "ALIAS"="COMMAND"
 ```
 
 To apply change:
-1. Restart zsh.
-2. Reflect settings by command.
+- Restart zsh.
+- Reflect settings by command.
 ```
 $ source ~/.zshrc
 ```
@@ -20,11 +20,8 @@ alias "ALIAS"="COMMAND"
 ```
 
 To apply change:
-1. Restart bash, under condition of changes loaded by `~/.bash_profile`.
-```sh
-source ~/.bashrc
-```
-2. Reflect settings by command.
+- Restart bash, under condition of changes loaded by `~/.bash_profile`.
+- Reflect settings by command.
 ```
 $ source ~/.bashrc
 ```
