@@ -1,16 +1,16 @@
 # Haskell Cheat Sheet <!-- omit in toc -->
 
 ## Table of content <!-- omit in toc -->
-- [Installing Haskell \[^installation\]](#installing-haskell-installation)
+- [Installing Haskell](#installing-haskell)
 - [Using GHCi](#using-ghci)
 - [Making a new project](#making-a-new-project)
 
-## Installing Haskell [^installation]
-[^installation]: [Installing Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/#using-homebrew)
-1. Install Stack (using Homebrew).
+## Installing Haskell
+1. Install Stack (using Homebrew) [^installation].
 ```
 $ brew install haskell-stack
 ```
+[^installation]: [Installing Stack](https://docs.haskellstack.org/en/stable/install_and_upgrade/#using-homebrew)
 
 ## Using GHCi
 - Call GHCi, to use an interpreter. Prompt should change to `Prelude`
