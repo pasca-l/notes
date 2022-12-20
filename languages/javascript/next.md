@@ -31,7 +31,7 @@ $ npm run dev
 ```
 
 ## Using Next.js
-Compared to React, Next.js does not require the following:
+As Next.js is the framework of React, the following are unnecessary:
 - `<html>` and `<body>` tags.
 - JSX compiler (Babel).
 - Use of explicit `React.`, as methods can be imported.
