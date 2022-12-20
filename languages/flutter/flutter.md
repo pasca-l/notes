@@ -2,6 +2,7 @@
 
 ## Table of Content <!-- omit in toc -->
 - [Preparing Flutter](#preparing-flutter)
+- [Creating project](#creating-project)
 - [Starting emulation](#starting-emulation)
 
 ## Preparing Flutter
@@ -25,6 +26,23 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 • No issues found!
 ```
+
+## Creating project
+Create a template Flutter project.
+```
+$ flutter create APP_NAME
+```
+Under APP_NAME directory, files are set up automatically.
+```
+APP_NAME
+  |- lib/
+  |- test/
+  |- pubspec.yaml
+  |- ...
+```
+- `lib` directory, holds all the main codes for the app. `main.dart` will be initially read.
+- `test` directory, is for holding codes for tests.
+- `pubspec.yaml` file, is for putting in dependencies.
 
 ## Starting emulation
 Open iOS emulator from Simulator application (by Finder).
