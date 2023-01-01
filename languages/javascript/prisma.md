@@ -5,6 +5,7 @@
 - [Creating database schema](#creating-database-schema)
 - [Creating tables in database](#creating-tables-in-database)
 - [Open Prisma Studio](#open-prisma-studio)
+- [Seeding the database](#seeding-the-database)
 
 ## Setting up
 1. Install Prisma CLI.
@@ -48,4 +49,18 @@ $ npx prisma db push
 Database created can be seen from the Prisma Studio GUI on `http://localhost:5555`.
 ```
 $ npx prisma studio
+```
+
+## Seeding the database
+To configure seeding in the project, `prisma.seed` property needs to be added to the dependencies.
+1. Add the following to `package.json`.
+```json
+"prisma": {
+  "seed": "ts-node prisma/seed.ts"
+}
+```
+
+2. Install the required dependencies.
+```
+$ npm install ts-node typescript @types/node --save-dev
 ```
