@@ -56,7 +56,7 @@ To configure seeding in the project, `prisma.seed` property needs to be added to
 1. Add the following to `package.json`.
 ```json
 "prisma": {
-  "seed": "ts-node prisma/seed.ts"
+  "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
 }
 ```
 
