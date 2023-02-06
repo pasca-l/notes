@@ -1,6 +1,13 @@
-# How to set alias
+# Linux Setting Cheat Sheet <!-- omit in toc -->
 
-## Zsh
+## Table of content <!-- omit in toc -->
+- [Alias settings](#alias-settings)
+  - [On zsh](#on-zsh)
+  - [On bash](#on-bash)
+
+
+## Alias settings
+### On zsh
 Aliases put in `~/.zshrc`.
 ```sh
 alias "ALIAS"="COMMAND"
@@ -13,7 +20,7 @@ To apply change:
 $ source ~/.zshrc
 ```
 
-## Bash
+### On bash
 Aliases put in `~/.bashrc`.
 ```sh
 alias "ALIAS"="COMMAND"
