@@ -1,11 +1,26 @@
 # Linux Setting Cheat Sheet <!-- omit in toc -->
 
 ## Table of content <!-- omit in toc -->
+- [Permission settings](#permission-settings)
+  - [Manage group member](#manage-group-member)
 - [SSH server setup](#ssh-server-setup)
 - [Alias settings](#alias-settings)
   - [On zsh](#on-zsh)
   - [On bash](#on-bash)
 
+
+## Permission settings
+### Manage group member
+- Check groups, which the user is in.
+```
+$ whoami  # to find out username
+$ cat /etc/group | grep USERNAME
+```
+- Adding or removing user from group
+```
+$ sudo gpasswd -a USERNAME GROUP  # to add
+$ sudo gpasswd -d USERNAME GROUP  # to remove
+```
 
 ## SSH server setup
 1. Install OpenSSH.
