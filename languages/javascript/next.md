@@ -5,6 +5,8 @@
 - [Start hosting website](#start-hosting-website)
 - [Using Next.js](#using-nextjs)
 - [Using Prisma in project](#using-prisma-in-project)
+- [Using Axios in project](#using-axios-in-project)
+  - [Calling API inside of Docker network](#calling-api-inside-of-docker-network)
 
 ## Creating project
 Create a template Next.js project (initialized as TypeScript project).
@@ -50,3 +52,50 @@ $ npx prisma generate
 import { PrismaClient } from '@prisma/client';
 export const prisma = new PrismaClient();
 ```
+
+## Using Axios in project
+> HTTP requests can also be done with the browser's standard library `fetch` function. `fetch` function does not return an error when given back HTTP status code that is out of 200 range. This allows `then` method to run.
+1. Install Axios in the project to make HTTP requests.
+```
+$ npm install axios
+```
+
+1. [Config defaults](https://axios-http.com/docs/config_defaults) can be specified globally, or using custom instances.
+```typescript
+// Global defaults
+axios.default.baseURL = 'https://api.example.com';
+axios.default.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+// Custom instances
+const instance = axios.create({
+  baseURL: 'https://api.example.com',
+  headers: {
+    'Content-Type': 'application/json',
+  }
+})
+// Altering defaults of custom instance
+instance.default.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+```
+
+3. Make HTTP requests, inside pages.
+```typescript
+import axios from "axios";
+
+const data = () => {
+  axios
+    .post(URL, {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+      message: "Hello World!",
+    })
+    .then((res) => {
+      return res;
+    });
+};
+```
+
+### Calling API inside of Docker network
+When using the browser to access the web page, the requesting URL inside of the project cannot be accessed by the docker container's hostname, such as `http://CONTAINER_NAME:PORT`. This is because the browser cannot resolve docker container names, and must be given an understandable host IP address for the browser.
+
+As default, due to security reasons, the browser follows the Same-Origin Policy, and does not allow scripts to request HTTP between different origins. To resolve Cross-Origin Resource Sharing (CORS) errors, it is best to give permission from the API server side.
