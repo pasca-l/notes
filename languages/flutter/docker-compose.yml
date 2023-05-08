@@ -7,5 +7,8 @@ services:
       - "8888:8888"
     stdin_open: true
     tty: true
-    # command: >
-    #   sh -c "flutter run -d web-server --web-port=8888 --web-hostname=0.0.0.0"
+    command: >
+      sh -c "
+        flutter pub get &&
+        flutter run -d web-server --web-port=8888 --web-hostname=0.0.0.0
+      "
