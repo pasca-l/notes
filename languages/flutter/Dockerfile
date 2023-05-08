@@ -1,17 +1,16 @@
 FROM ubuntu:20.04
 
+ENV HOME /home/local/
 WORKDIR /home/local/
 
 # Flutter SDK
 RUN apt update && apt upgrade -y \
     && apt install -y curl file git unzip xz-utils zip \
-    && git clone https://github.com/flutter/flutter.git /usr/bin/flutter
-ENV PATH /usr/bin/flutter/bin:$PATH
+    && git clone https://github.com/flutter/flutter.git /usr/local/bin/flutter
+ENV PATH /usr/local/bin/flutter/bin:$PATH
 
 # ignores dialog
 ENV DEBIAN_FRONTEND noninteractive
-
-# Android toolchain (not necessary)
 
 # Chrome (not necessary)
 RUN apt install -y wget gnupg \
@@ -22,9 +21,19 @@ RUN apt install -y wget gnupg \
     && apt update \
     && apt install -y google-chrome-stable
 
+# Android toolchain (not necessary)
+ENV ANDROID_HOME /usr/local/bin/android-sdk
+ENV PATH /usr/local/bin/android-sdk/cmdline-tools/bin:$PATH
+RUN mkdir -p $ANDROID_HOME && cd $ANDROID_HOME \
+    # from https://developer.android.com/studio#command-tools
+    && wget -O android-sdk-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip \
+    && unzip android-sdk-tools.zip && rm android-sdk-tools.zip \
+    && apt install -y default-jdk
+RUN yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses
+RUN sdkmanager --sdk_root=$ANDROID_HOME "build-tools;33.0.0" "platform-tools" "platforms;android-33" "cmdline-tools;9.0"
+
 # Linux toolchain
 RUN apt install -y clang cmake ninja-build pkg-config libgtk-3-dev
 
+# set back as default
 ENV DEBIAN_FRONTEND newt
-
-CMD [ "flutter", "run", "-d", "web-server", "--web-port=8888", "--web-hostname=0.0.0.0" ]
