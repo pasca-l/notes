@@ -5,5 +5,12 @@ services:
     build: .
     volumes:
       - ./src/:/var/www/html/
+      - ./laravel/:/var/www/laravel/
     ports:
-      - "8000:80"
+      - "8888:80"
+      - "8000:8000"
+    command: >
+      sh -c "
+        cd /var/www/laravel/ &&
+        php artisan serve --host 0.0.0.0
+      "

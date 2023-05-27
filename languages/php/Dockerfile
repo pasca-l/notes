@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM php:8.1-apache
 
 # install Composer
 
@@ -10,3 +10,10 @@ FROM php:8.0-apache
 
 # via Docker image, using multi-stage build
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# composer plugins are disabled for safety for root by default
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
+# package for creating project
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install -y zip
