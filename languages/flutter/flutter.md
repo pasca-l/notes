@@ -60,6 +60,7 @@ APP_NAME
     |- router/
     |- states/
     |- views/
+    |- ...
   |- ...
 ```
 > - `components` directory, holds widgets for app.
@@ -87,7 +88,9 @@ APP_NAME
 - Add `importer.dart` file, to compile imports.
 ```
 APP_NAME
-  |- importer.dart
+  |- lib/
+    |- importer.dart
+    |- ...
   |- ...
 ```
 ```dart
