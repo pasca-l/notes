@@ -3,7 +3,9 @@
 ## Table of Content <!-- omit in toc -->
 - [Preparing Flutter](#preparing-flutter)
 - [Creating project](#creating-project)
+  - [Customizing directory structure](#customizing-directory-structure)
 - [Starting emulation](#starting-emulation)
+
 
 ## Preparing Flutter
 Use `flutter doctor` command to check software prerequisite.
@@ -27,6 +29,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 • No issues found!
 ```
 
+
 ## Creating project
 Create a template Flutter project.
 ```
@@ -40,9 +43,62 @@ APP_NAME
   |- pubspec.yaml
   |- ...
 ```
-- `lib` directory, holds all the main codes for the app. `main.dart` will be initially read.
-- `test` directory, is for holding codes for tests.
-- `pubspec.yaml` file, is for putting in dependencies.
+> - `lib` directory, holds all the main codes for the app. `main.dart` will be initially read.
+> - `test` directory, is for holding codes for tests.
+> - `pubspec.yaml` file, is for putting in dependencies.
+
+### Customizing directory structure
+- Set up `lib` directory.
+```
+APP_NAME
+  |- lib/
+    |- components/
+    |- constants/
+    |- infrastructure/
+    |- models/
+    |- repository/
+    |- router/
+    |- states/
+    |- views/
+  |- ...
+```
+> - `components` directory, holds widgets for app.
+> - `constants` directory, holds constant values.
+>   - `config.dart`, defines configuration values.
+>   - `colors.dart`, defines color values for defining themes.
+>   - `urls.dart`, defines URL strings.
+>   - `sizes.dart`, defines sizes for components, eg. padding, duration.
+> - `infrastructure` directory, holds API and database classes.
+> - `models` directory, holds data model classes.
+> - `repository` directory, holds data processing functions.
+> - `router` directory, holds screen transition classes.
+> - `states` directory, holds functions that updates UI states, eg. while loading data, or error in fetching data.
+> - `views` directory, holds screen views of app, usually structured from `components`.
+
+- Add `assets` directory, for images or json.
+```
+APP_NAME
+  |- assets/
+    |- images/
+    |- json/
+  |- ...
+```
+
+- Add `importer.dart` file, to compile imports.
+```
+APP_NAME
+  |- importer.dart
+  |- ...
+```
+```dart
+// inside `importer.dart`, export packages
+export 'package:flutter/material.dart';
+// ... and other packages
+```
+```dart
+// in any other files
+import 'package:APP_NAME/importer.dart';
+```
 
 ## Starting emulation
 Open iOS emulator from Simulator application (by Finder).
