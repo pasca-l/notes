@@ -14,23 +14,24 @@ $ composer create-project --prefer-dist laravel/laravel APP_NAME
 Under APP_NAME directory, files are set up automatically.
 ```
 APP_NAME
-  ├── README.md
-  ├── app
-  ├── artisan
-  ├── bootstrap
-  ├── composer.json
-  ├── composer.lock
-  ├── config
-  ├── database
-  ├── package.json
-  ├── phpunit.xml
-  ├── public
-  ├── resources
-  ├── routes
-  ├── storage
-  ├── tests
-  ├── vendor
-  └── vite.config.js
+  |- .env
+  |- README.md
+  |- app
+  |- artisan
+  |- bootstrap
+  |- composer.json
+  |- composer.lock
+  |- config
+  |- database
+  |- package.json
+  |- phpunit.xml
+  |- public
+  |- resources
+  |- routes
+  |- storage
+  |- tests
+  |- vendor
+  |- vite.config.js
 ```
 
 ## Serving the application
