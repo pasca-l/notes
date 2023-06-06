@@ -4,6 +4,7 @@
 ## Table of Content <!-- omit in toc -->
 - [Creating workflow](#creating-workflow)
 - [Connecting with AWS](#connecting-with-aws)
+- [Login to Amazon ECR](#login-to-amazon-ecr)
 
 
 ## Creating workflow
@@ -72,7 +73,7 @@ Edit the trust policy for IAM role to be used.
 }
 ```
 
-3. Add permission to token and use official action.
+3. Add permission to token and use [official action](https://github.com/aws-actions/configure-aws-credentials).
 ```yaml
 jobs:
   aws:
@@ -100,3 +101,16 @@ jobs:
           pip install awscli
           aws COMMAND
 ```
+
+
+## Login to Amazon ECR
+0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
+
+1. Use [official action](https://github.com/aws-actions/amazon-ecr-login) to login to Amazon ECR.
+```yaml
+      - name: login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+        id: login-ecr   # id to refer information in later steps
+```
+
+2. Push Docker image to Amazon ECR.
