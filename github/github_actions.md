@@ -3,6 +3,7 @@
 
 ## Table of Content <!-- omit in toc -->
 - [Creating workflow](#creating-workflow)
+- [Using variables and context](#using-variables-and-context)
 - [Connecting with AWS](#connecting-with-aws)
 - [Login to Amazon ECR](#login-to-amazon-ecr)
 
@@ -39,6 +40,18 @@ jobs:
         run: |
           echo "running main script"
           python main.py
+```
+
+## Using [variables](https://docs.github.com/en/actions/learn-github-actions/variables) and [context](https://docs.github.com/en/actions/learn-github-actions/contexts)
+- Variables can only be accessed in the runner under the shell environment, expressed as `$VARIABLE`.
+- Context can be refered as a context object's property, expressed as `${{ <context>.<property> }}`.
+
+```yaml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    - if: ${{ runner.os }} == 'Linux'
+      run: echo "Running $RUNNER_OS!"
 ```
 
 
