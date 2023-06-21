@@ -13,13 +13,15 @@ RUN apt-get update && apt-get upgrade -y \
     # PDO PHP extension, enabled by default (https://www.php.net/manual/en/pdo.installation.php)
     # Session PHP extension, enabled by default (https://www.php.net/manual/en/session.installation.php)
     && apt-get install -y nginx \
+    # install FPM (FastCGI Process Manager), which allows execution using a different process with the web server process
+    # connection between nginx and php-fpm is usually done by TCP or UNIX domain socket
     && apt-get install -y php8.1-fpm
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY laravel/ /usr/share/nginx/laravel/
 COPY laravel.conf /etc/nginx/conf.d/
 WORKDIR /usr/share/nginx/laravel/
-# give permission to default web server user, to run with php-fpm socket
+# give permission to default web server user, to run with php-fpm socket (settings at /etc/php/8.1/fpm/php-fpm.conf, which includes /etc/php/8.1/fpm/pool.d/www.conf that sets permission for unix socket)
 RUN chown -R www-data:www-data *
 
 # for production optimization
