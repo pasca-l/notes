@@ -1,0 +1,32 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install -y zip \
+    # Laravel server requirements (https://laravel.com/docs/10.x/deployment)
+    && apt-get install -y php8.1 php8.1-curl php8.1-dom php8.1-mbstring \
+    # Filter PHP extension, enabled by default (https://www.php.net/manual/en/filter.installation.php)
+    # Hash PHP extension, always enabled in core PHP extension (https://www.php.net/manual/en/hash.installation.php)
+    # OpenSSL PHP extension, supported with `--with-openssl` during compile (https://www.php.net/manual/en/openssl.installation.php)
+    # PCRE PHP extension, always enabled in core PHP extension (https://www.php.net/manual/en/pcre.installation.php)
+    # PDO PHP extension, enabled by default (https://www.php.net/manual/en/pdo.installation.php)
+    # Session PHP extension, enabled by default (https://www.php.net/manual/en/session.installation.php)
+    && apt-get install -y nginx \
+    && apt-get install -y php8.1-fpm
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY laravel/ /usr/share/nginx/laravel/
+COPY laravel.conf /etc/nginx/conf.d/
+WORKDIR /usr/share/nginx/laravel/
+# give permission to default web server user, to run with php-fpm socket
+RUN chown -R www-data:www-data *
+
+# for production optimization
+# RUN composer install --optimize-autoloader --no-dev \
+#     && php artisan config:cache \
+#     && php artisan route:cache \
+#     && php artisan view:cache
+
+# run php-fpm and nginx
+CMD service php8.1-fpm start && nginx -g 'daemon off;'
