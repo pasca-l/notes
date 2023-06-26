@@ -4,8 +4,9 @@
 ## Table of Content <!-- omit in toc -->
 - [Creating workflow](#creating-workflow)
 - [Using variables and context](#using-variables-and-context)
+- [Triggering workflow manually](#triggering-workflow-manually)
 - [Connecting with AWS](#connecting-with-aws)
-- [Login to Amazon ECR](#login-to-amazon-ecr)
+  - [Login to Amazon ECR](#login-to-amazon-ecr)
 
 
 ## Creating workflow
@@ -52,6 +53,24 @@ jobs:
     runs-on: ubuntu-latest
     - if: ${{ runner.os }} == 'Linux'
       run: echo "Running $RUNNER_OS!"
+```
+
+
+## Triggering workflow manually
+Use [`workflow_dispatch` trigger](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch), with custom inputs. Input values can be referenced from the `inputs.<name>` or `github.event.inputs.<name>` context property.
+```yaml
+on:
+  workflow_dispatch:
+    # optional custom inputs
+    inputs:
+      <name>:
+        description: 'manual input for workflow'
+        required: false
+        type: [choice, boolean, environment, ...]
+        # type 'choice' takes in options
+        # options:
+        #   - option1
+        #   - option2
 ```
 
 
@@ -116,7 +135,7 @@ jobs:
 ```
 
 
-## Login to Amazon ECR
+### Login to Amazon ECR
 0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
 
 1. Use [official action](https://github.com/aws-actions/amazon-ecr-login) to login to Amazon ECR.
