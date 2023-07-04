@@ -7,6 +7,7 @@
 - [Triggering workflow manually](#triggering-workflow-manually)
 - [Connecting with AWS](#connecting-with-aws)
   - [Login to Amazon ECR](#login-to-amazon-ecr)
+  - [Deploy AWS CloudFormation stacks](#deploy-aws-cloudformation-stacks)
 
 
 ## Creating workflow
@@ -146,3 +147,17 @@ jobs:
 ```
 
 2. Push Docker image to Amazon ECR.
+
+
+### Deploy AWS CloudFormation stacks
+0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
+
+1. Use [official action](https://github.com/aws-actions/aws-cloudformation-github-deploy) to deploy AWS CloudFormation stack.
+```yaml
+      - name: deploy stack to AWS CloudFormation
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: NAME
+          template: FILE_PATH
+          no-fail-on-empty-changeset: "1" # throw no error for no changes
+```
