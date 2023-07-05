@@ -1,6 +1,5 @@
-# AWS CloudFormation Cheat Sheet [^userguide] [^document] <!-- omit in toc -->
+# AWS CloudFormation Cheat Sheet [^userguide] <!-- omit in toc -->
 [^userguide]: [Official user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
-[^document]: [Official document references](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)
 
 ## Table of Content <!-- omit in toc -->
 - [Recommended extensions for VSCode](#recommended-extensions-for-vscode)
@@ -8,10 +7,10 @@
 
 
 ## Recommended extensions for VSCode
-- [`CloudFormation Linter`](https://github.com/aws-cloudformation/cfn-lint)
+- [CloudFormation Linter](https://github.com/aws-cloudformation/cfn-lint)
   - `cfn-lint` or `cfn-python-lint` from pip, required
   - `pydot` from pip, not required
-- [`CloudFormation`](https://github.com/aws-scripting-guy/cform-VSCode)
+- [CloudFormation](https://github.com/aws-scripting-guy/cform-VSCode)
 
 
 ## Create template
