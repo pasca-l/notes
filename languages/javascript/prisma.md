@@ -3,6 +3,8 @@
 ## Table of Content <!-- omit in toc -->
 - [Setting up](#setting-up)
 - [Creating database schema](#creating-database-schema)
+  - [Running on specific platform](#running-on-specific-platform)
+  - [Defining entities](#defining-entities)
 - [Creating tables in database](#creating-tables-in-database)
 - [Open Prisma Studio](#open-prisma-studio)
 - [Seeding the database](#seeding-the-database)
@@ -23,6 +25,16 @@ Under the newly created `prisma` directory, files are set up automatically.
 - `.env` file, defines database connection URL, and other environment variables (such as username, password, etc.).
 
 ## Creating database schema
+### Running on specific platform
+Platform to execute the code on should be designated by some [supported operating systems](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#binarytargets-options) of `binaryTargets`, especially when running on different platform environments.
+```javascript
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+```
+
+### Defining entities
 Entities are represented as models and defined by a number of fields.
 ```
 model Entity {
