@@ -4,6 +4,8 @@
 ## Table of Content <!-- omit in toc -->
 - [Recommended extensions for VSCode](#recommended-extensions-for-vscode)
 - [Create template](#create-template)
+- [Nesting Stacks](#nesting-stacks)
+- [Referencing values](#referencing-values)
 
 
 ## Recommended extensions for VSCode
@@ -81,4 +83,86 @@ Outputs:
     Description: "Description for OUTPUT1"
     Export:
       Name: !Sub "${AWS::StackName}-OUTPUT1"
+```
+
+
+## Nesting Stacks
+To create stacks with split file structure, [`AWS::CloudFormation::Stack`](https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) can be used to nest a stack as a resource.
+```yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Nesting stacks with AWS::CloudFormation::Stack resource."
+
+Resources:
+  <RESOURCE1>:
+    Type: AWS::CloudFormation::Stack
+    # URL to stack YAML file in Amazon S3 bucket is required
+    TemplateURL: https://<S3_BUCKET_NAME>.s3.<REGION_CODE>.amazonaws.com/TEMPLATE.yml
+    # Parameters that are required by the target template
+    Parameters:
+      <PARAM1>: "default"
+
+  <RESOURCE2>:
+    Type: ...
+    # Unnecessary if this resource contains !GetAtt for <RESOURCE1>
+    # DependsOn: <RESOURCE1>
+    Properties:
+      Tags:
+        - Key: Name
+          # Referencing output values from an imported template
+          Value: !GetAtt <RESOURCE1>.Outputs.<OUTPUT1>
+```
+
+- Because `Parameters` can only be a type of `List<String>`, template accepting parameters as lists needs to be string manipulated.
+```yaml
+# template defining nested stacks
+Resources:
+  <RESOURCE1>:
+    Type: AWS::CloudFormation::Stack
+    TemplateURL: ...
+    Parameters:
+      "PARAM1": !Join
+        - ','
+        - - <VALUE1>
+```
+```yaml
+# stack that is imported
+Parameters:
+  <PARAM1>:
+    Description: "Joined string for PARAM1"
+    Type: String
+
+Resources:
+  <RESOURCE1>:
+    Type: ...
+    Properties:
+      Tags: !Split [',', !Ref "<PARAM1>"]
+```
+
+
+## Referencing values
+- If using short form `!Sub`, short form `!ImportValue` cannot be used in YAML.
+```yaml
+# no short form
+Value: Fn::ImportValue
+  'Fn::Sub': "${<PARAM>}-text"
+
+# with short form
+Value: Fn::ImportValue:
+  !Sub "${<PARAM>}-text"
+# or in one line
+Value: {Fn::ImportValue: !Sub "${<PARAM>}-text"}
+```
+
+- If using short form `!Ref`, short form `!Join` cannot be used with `comma-delimited list of values` in YAML.
+```yaml
+# if joining values does not contain !Ref
+Value: !Join [<DELIMITER>, [<VALUE1>, <VALUE2>, ...]]
+
+# if joining values does contain !Ref
+Value: !Join
+  - <DELIMITER>
+  - - <VALUE1>
+    - !Ref <PARAM1>
+    - !Ref <PARAM2>
+    - ...
 ```
