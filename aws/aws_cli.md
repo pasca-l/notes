@@ -9,6 +9,9 @@
 - [Uploading AWS Lambda code](#uploading-aws-lambda-code)
 - [Uploading AWS Lambda layer and attaching to AWS Lambda function](#uploading-aws-lambda-layer-and-attaching-to-aws-lambda-function)
 - [Uploading Docker image to Amazon ECR](#uploading-docker-image-to-amazon-ecr)
+- [Using on GitHub Actions](#using-on-github-actions)
+  - [Login to Amazon ECR](#login-to-amazon-ecr)
+  - [Deploy AWS CloudFormation stacks](#deploy-aws-cloudformation-stacks)
 
 
 ## Downloading and installing AWS CLI
@@ -92,4 +95,90 @@ $ aws ecr get-login-password --region AWS_REGION | docker login --username AWS -
 $ docker build -t ECR_REPOSITORY .
 $ docker tag ECR_REPOSITORY:latest <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REPOSITORY>:latest
 $ docker push <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REPOSITORY>:latest
+```
+
+
+## Using on [GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+1. Add GitHub OIDC identity provider to IAM.
+- Use `https://token.actions.githubusercontent.com` for provider URL.
+- Use `sts.amazonaws.com` for audience.
+
+2. Configure IAM role's trust policy.
+
+Edit the trust policy for IAM role to be used.
+```yaml
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::<AWS_ACCOUND_ID>:oidc-provider/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo:<GITHUB_ORGANIZATION>/<GITHUB_REPOSITORY>:*"
+                },
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                }
+            }
+        }
+    ]
+}
+```
+
+3. Add permission to token and use [official action](https://github.com/aws-actions/configure-aws-credentials).
+```yaml
+jobs:
+  aws:
+    runs-on: ubuntu-latest
+
+    # token permissions (can be written outside of jobs, if other jobs uses AWS as well)
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+
+      - name: configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::<AWS_ACCOUNT_ID>:role/<AWS_ROLE>
+          aws-region: <AWS_REGION>
+
+      - name: using AWS CLI commands
+        run: |
+          pip install awscli
+          aws COMMAND
+```
+
+### Login to Amazon ECR
+0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
+
+1. Use [official action](https://github.com/aws-actions/amazon-ecr-login) to login to Amazon ECR.
+```yaml
+      - name: login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+        id: login-ecr   # id to refer information in later steps
+```
+
+2. Push Docker image to Amazon ECR.
+
+### Deploy AWS CloudFormation stacks
+0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
+
+1. Use [official action](https://github.com/aws-actions/aws-cloudformation-github-deploy) to deploy AWS CloudFormation stack.
+```yaml
+      - name: deploy stack to AWS CloudFormation
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: NAME
+          template: FILE_PATH
+          no-fail-on-empty-changeset: "1" # throw no error for no changes
 ```
