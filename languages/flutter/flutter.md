@@ -5,6 +5,7 @@
 - [Creating project](#creating-project)
   - [Customizing directory structure](#customizing-directory-structure)
 - [Starting emulation](#starting-emulation)
+- [Using on GitHub Actions](#using-on-github-actions)
 
 
 ## Preparing Flutter
@@ -103,6 +104,7 @@ export 'package:flutter/material.dart';
 import 'package:APP_NAME/importer.dart';
 ```
 
+
 ## Starting emulation
 Open iOS emulator from Simulator application (by Finder).
 ```
@@ -125,4 +127,32 @@ Google Chrome 101.0.4951.54
 Select device and run a Flutter app.
 ```
 $ flutter run -d DEVICE_NAME
+```
+
+
+## Using on GitHub Actions
+- Use [`flutter-action`](https://github.com/subosito/flutter-action), to use `flutter` commands.
+```yaml
+env:
+  app_root: <APP_ROOT>
+  repo_name: ${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}
+
+jobs:
+  build:
+    steps:
+      - name: get flutter sdk
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+
+      - name: install packages and test app
+        working-directory: ${{ env.app_root }}
+        run: |
+          flutter pub get
+          flutter test
+
+      - name: build for web
+        working-directory: ${{ env.app_root }}
+        run: |
+          flutter build web --base-href /${{ env.repo_name }}/
 ```

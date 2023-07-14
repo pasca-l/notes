@@ -5,6 +5,7 @@
 - [Creating workflow](#creating-workflow)
 - [Using variables and context](#using-variables-and-context)
 - [Triggering workflow manually](#triggering-workflow-manually)
+- [Deploying built application onto GitHub Pages](#deploying-built-application-onto-github-pages)
 
 
 ## Creating workflow
@@ -69,4 +70,42 @@ on:
         # options:
         #   - option1
         #   - option2
+```
+
+
+## Deploying built application onto GitHub Pages
+1. Upload [artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts) that can be deployed to GitHub Pages, using [official action](https://github.com/actions/upload-pages-artifact).
+2. Deploy artifacts to GitHub Pages, using [official action](https://github.com/actions/deploy-pages).
+
+```yaml
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload artifact (built application)
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "."
+
+  deploy:
+    # dependency to the 'upload' job, to use artifact
+    needs: upload
+
+    # permissions needed for GitHub Pages deployment
+    permissions:
+      pages: write
+      id-token: write
+
+    # deploy to an environment (eg. dev, prod)
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
