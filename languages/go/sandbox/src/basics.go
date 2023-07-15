@@ -59,12 +59,6 @@ func adder() func(int) int {
 	}
 }
 
-// this function will be used as following:
-// eg. sum := adder()
-//     sum(4)
-//     sum(5)
-//     fmt.Println(sum) -> 9
-
 func main() {
 	// if initializer is present for declaration, the type can be omitted
 	var a = 1
