@@ -1,8 +1,10 @@
 version: '3'
 
 services:
-  app:
+  flutter:
     build: .
+    volumes:
+      - ./app/:/home/local/
     ports:
       - "8888:8888"
     stdin_open: true
