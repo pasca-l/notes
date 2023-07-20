@@ -51,12 +51,21 @@ func decorate(fn func(int, int) int) (string, int) {
 
 // functions can be closures, which is a function value that references
 // variables from outside its body, and "bound" to its own variables
+// in other words, function that returns an inner function
 func adder() func(int) int {
 	sum := 0
 	return func(x int) int {
 		sum += x
 		return sum
 	}
+
+	// closures can also be used to implement generators, by internal update
+	/*
+	return func() int {
+		sum++
+		return sum
+	}
+	*/
 }
 
 func main() {
