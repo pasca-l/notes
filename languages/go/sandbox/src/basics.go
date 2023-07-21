@@ -61,10 +61,10 @@ func adder() func(int) int {
 
 	// closures can also be used to implement generators, by internal update
 	/*
-	return func() int {
-		sum++
-		return sum
-	}
+		return func() int {
+			sum++
+			return sum
+		}
 	*/
 }
 
@@ -103,6 +103,14 @@ func main() {
 	pow := []int{1, 2, 4, 8}
 	for i, v := range pow {
 		fmt.Println(i, v)
+	}
+
+	// labeled statement may be the target of goto, break or continue
+Loop:
+	for {
+		for {
+			break Loop
+		}
 	}
 
 	// `switch` statement,
@@ -164,4 +172,13 @@ func main() {
 	for i := 0; i < 5; i++ {
 		fmt.Println(neg(-2 * i))
 	}
+
+	// panic built-in function stops the ordinary flow of control
+	// recover built-in function regains control of panicking goroutine
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("recovered from:", r)
+		}
+	}()
+	panic("panicking!!")
 }
