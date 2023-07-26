@@ -18,7 +18,7 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y php8.1-fpm
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY laravel/ /usr/share/nginx/laravel/
+COPY project/ /usr/share/nginx/laravel/
 COPY laravel.conf /etc/nginx/conf.d/
 WORKDIR /usr/share/nginx/laravel/
 # give permission to default web server user, to run with php-fpm socket (settings at /etc/php/8.1/fpm/php-fpm.conf, which includes /etc/php/8.1/fpm/pool.d/www.conf that sets permission for unix socket)

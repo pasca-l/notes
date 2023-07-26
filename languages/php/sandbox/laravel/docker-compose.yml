@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  laravel:
+    build: .
+    volumes:
+      - ./project/:/var/www/laravel/
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "
+        composer install &&
+        php artisan serve --host 0.0.0.0
+      "
+
+  # laravel_nginx:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.nginx
+  #   volumes:
+  #     - ./project/:/usr/share/nginx/laravel/
+  #   ports:
+  #     - "8000:80"
