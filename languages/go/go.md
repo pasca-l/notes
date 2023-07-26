@@ -6,6 +6,7 @@
 - [Running code](#running-code)
 - [Testing code](#testing-code)
 - [Reference documentation](#reference-documentation)
+- [Handling dependencies](#handling-dependencies)
 
 
 ## Formatting code
@@ -76,4 +77,21 @@ $ go test -v ./...
 Show documentation of packages, identifiers, or methods.
 ```bash
 $ go doc PACKAGE.IDENTIFIER.METHOD
+```
+
+
+## Handling dependencies
+1. Initialize `go mod`, which creates `go.mod` and `go.sum` files.
+```bash
+$ go mod init
+```
+
+2. Add packages using `go get` command.
+```bash
+$ go get PACKAGE
+```
+
+3. Tidy up dependencies, deleting unnecessary files.
+```bash
+$ go mod tidy
 ```
