@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  wordpress:
+    build: .
+    volumes:
+      - ./project/:/var/www/laravel/
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_USER=user
+      - WORDPRESS_DB_PASSWORD=password
+    command: >
+      sh -c "
+        composer install &&
+        php artisan serve --host 0.0.0.0
+      "
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./mysql/:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
