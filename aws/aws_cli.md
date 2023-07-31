@@ -46,8 +46,13 @@ Default output format [None]: [json, yaml, text, ...]
 1. Configure IAM role's policy. The given IAM role should be authorized to perform `CreateMultipartUpload` operation, with `s3:putObject` on target Amazon S3 bucket.
 
 2. Upload file to target Amazon S3 bucket.
+- To copy objects to a location, use `aws s3 cp`.
 ```bash
 $ aws s3 cp FILES AMAZON_S3_URI
+```
+- To sync directories with a location, allowing removal of objects, use `aws s3 sync`.
+```bash
+$ aws s3 sync DIRECTORY AMAZON_S3_URI
 ```
 
 
