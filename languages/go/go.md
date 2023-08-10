@@ -86,12 +86,17 @@ $ go doc PACKAGE.IDENTIFIER.METHOD
 $ go mod init
 ```
 
-2. Add packages using `go get` command.
-```bash
-$ go get PACKAGE
-```
-
-3. Tidy up dependencies, deleting unnecessary files.
+2. Tidy up dependencies, adding missing files and deleting unnecessary files, according to the imports of the source files.
 ```bash
 $ go mod tidy
 ```
+> There are 2 modes, `GOPATH mode` or `module-aware mode`, in which the go command runs (as of Go 1.11, controlled with the `GO111MODULE` environment variable).
+> 1. `GOPATH mode`, which the command looks into `vendor` directories and in `GOPATH` to find dependencies.
+> 2. `module-aware mode`, which the command uses the `go.mod` file to find versioned dependencies (set to default, as of Go 1.16).
+> 
+> Use cases of similar go commands are as below:
+> - `go get`, to edit `go.mod` file (as of Go 1.18, installation of executables is deprecated).
+> - `go install`, to install executable.
+>   - `go install module`, to read version requirements from `go.mod`.
+>   - `go install module@version`, to install without altering `go.mod`.
+> - `go mod tidy`, auto delete and addition of dependency.
