@@ -5,6 +5,7 @@
   - [Components](#components)
   - [Props](#props)
   - [State](#state)
+- [Creating project](#creating-project)
 
 ## Using React
 To use React, the following scripts are used (loaded externally from unpkg.com):
@@ -25,8 +26,7 @@ To use React, the following scripts are used (loaded externally from unpkg.com):
 
 With React, the code can be written declaratively, instead of imperative JavaScript code. Note that, `<h1>...</h1>` inside `ReactDOM` method would give a syntax error, due to the code being JSX and not valid JavaScript. Therefore, for the browser to understand JSX, JavaScript compiler, such as Babel, needs to transform the JSX script.
 ```html
-<!-- index.html -->
-<!-- in <body> -->
+<!-- index.html, in <body> -->
 
 <!-- loading Babel -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -49,8 +49,7 @@ With React, the code can be written declaratively, instead of imperative JavaScr
 ### Components
 User interfaces can be broken into small building blocks called components. By using this modularity, the project becomes more maintainable. React components should be capitalized to distinguish them from plain HTML and JavaScript, and used with angle brackets.
 ```html
-<!-- index.html -->
-<!-- in <body> -->
+<!-- index.html, in <body> -->
 <script type="text/jsx">
   const app = document.getElementById("app");
 
@@ -66,8 +65,7 @@ User interfaces can be broken into small building blocks called components. By u
 ### Props
 React components can have properties passed to it. Like HTML attributes, the props are accepted as the component's first function parameter as an object.
 ```html
-<!-- index.html -->
-<!-- in <body> -->
+<!-- index.html, in <body> -->
 <script type="text/jsx">
   const app = document.getElementById("app");
 
@@ -79,12 +77,12 @@ React components can have properties passed to it. Like HTML attributes, the pro
   ReactDOM.render(<Header title="Hello World!"/>, app);
 </script>
 ```
+- If the component is used as a regular HTML tag, the text appears in between the tags. This text can be accessed by `children`.
 
 ### State
 User interfaces can change according to the state of the React component. Hooks can be used to add additional logic of state to the component without writing a class.
 ```html
-<!-- index.html -->
-<!-- in <body> -->
+<!-- index.html, in <body> -->
 <script type="text/jsx">
   const app = document.getElementById("app");
 
@@ -107,3 +105,23 @@ User interfaces can change according to the state of the React component. Hooks 
   ReactDOM.render(<Header title="Hello World!"/>, app);
 </script>
 ```
+- Because changing state triggers re-rendering of the component, conflicting interactions between functions can take place. To skip unnecessary processes, `useEffect(()=>{}, [])` can be used.
+
+## Creating project
+Create a template React project.
+```
+$ npx create-react-app PROJECT_DIRECTORY
+```
+Under PROJECT_DIRECTORY, files are set up automatically.
+```
+PROJECT_DIRECTORY
+  |- src/
+  |- public/
+  |- package.json
+  |- node_modules/
+  |- ...
+```
+- `src` directory, holds files in the unit of pages.
+- `public` directory, stores static assets including images, fonts and etc.
+- `package.json` file, is for recording dependencies.
+- `node_modules` directory, holds all dependencies.
