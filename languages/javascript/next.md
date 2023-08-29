@@ -26,7 +26,7 @@ PROJECT_DIRECTORY
 ```
 - `pages` directory, holds files in the unit of pages. `index.tsx` is initially read. Pages are mapped to `/PAGE_NAME`.
 - `public` directory, stores static assets including images, fonts and etc. Files inside are referenced from the base URL (`/`).
-- `package.json` file, is for putting in dependencies.
+- `package.json` file, is for recording dependencies.
 - `node_modules` directory, holds all dependencies required for Next.js.
 
 
