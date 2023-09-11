@@ -172,8 +172,16 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         id: login-ecr   # id to refer information in later steps
 ```
+> The role for carrying out this action should have the following policies:
+> - `ecr:GetAuthorizationToken`
 
 2. Push Docker image to Amazon ECR.
+> The role for carrying out this action should have the following policies:
+> - `ecr:BatchCheckLayerAvailability`
+> - `ecr:CompleteLayerUpload`
+> - `ecr:InitiateLayerUpload`
+> - `ecr:PutImage`
+> - `ecr:UploadLayerPart`
 
 ### Deploy AWS CloudFormation stacks
 0. Workflow must include steps on [Connecting with AWS](#connecting-with-aws).
