@@ -8,6 +8,7 @@
   - [Queries](#queries)
   - [Mutations](#mutations)
   - [Variables](#variables)
+- [Using on GitHub Actions](#using-on-github-actions)
 
 
 ## Authenticating to API
@@ -116,4 +117,26 @@ query($owner_name: String! = "default", $repo_name: String!) {
     ...
   }
 }
+```
+
+## Using on GitHub Actions
+1. Use [official action](https://github.com/octokit/graphql-action).
+```yaml
+jobs:
+  graphQLAPI:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: octokit/graphql-action@v2.x
+        with:
+          query: |
+            query QUERY_NAME($owner: String!, $repo: String!) {
+              repository(owner: $owner, name: $repo) {
+                ...
+              }
+            }
+          variables: |
+            owner: ${{ github.event.repository.owner.name }}
+            repo: ${{ github.event.repository.name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
