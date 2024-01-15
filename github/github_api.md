@@ -43,7 +43,7 @@ query {
 }
 ```
 
-Forming query requires specification of nested subfields of [objects](https://docs.github.com/en/graphql/reference/objects), until returning only scalars.
+Forming [query](https://docs.github.com/en/graphql/reference/queries) requires specification of nested subfields of [objects](https://docs.github.com/en/graphql/reference/objects), until returning only scalars.
 
 ```graphql
 query {
@@ -138,5 +138,5 @@ jobs:
             owner: ${{ github.event.repository.owner.name }}
             repo: ${{ github.event.repository.name }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 ```
