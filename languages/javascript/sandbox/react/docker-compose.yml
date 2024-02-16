@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  react:
+    build: .
+    volumes:
+      - ./app/:/home/local/app/
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "
+        npm start
+      "
