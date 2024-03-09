@@ -1,11 +1,38 @@
 # React.js Cheat Sheet <!-- omit in toc -->
 
 ## Table of Content <!-- omit in toc -->
+- [Creating project](#creating-project)
+- [Adding TypeScript to existing project](#adding-typescript-to-existing-project)
 - [Using React](#using-react)
   - [Components](#components)
   - [Props](#props)
   - [State](#state)
-- [Creating project](#creating-project)
+- [Markup with JSX](#markup-with-jsx)
+
+## Creating project
+Create a template React project.
+```
+$ npx create-react-app PROJECT_DIRECTORY
+```
+Under PROJECT_DIRECTORY, files are set up automatically.
+```
+PROJECT_DIRECTORY
+  |- src/
+  |- public/
+  |- package.json
+  |- node_modules/
+  |- ...
+```
+- `src` directory, holds files in the unit of pages.
+- `public` directory, stores static assets including images, fonts and etc.
+- `package.json` file, is for recording dependencies.
+- `node_modules` directory, holds all dependencies.
+
+## Adding TypeScript to existing project
+1. Install React's type definitions.
+```
+npm install @types/react @types/react-dom
+```
 
 ## Using React
 To use React, the following scripts are used (loaded externally from unpkg.com):
@@ -54,12 +81,36 @@ User interfaces can be broken into small building blocks called components. By u
   const app = document.getElementById("app");
 
   // React component
+  // which is a JavaScript function that returns markup
   function Header() {
     return <h1>Hello World!</h1>;
   }
 
   ReactDOM.render(<Header />, app);
 </script>
+```
+
+To add a style, CSS class is specified with `className`. React does not prescribe how the CSS files are added, so in the simplest case, using the `<link>` tag (in other cases, build tools or frameworks will provide this).
+```html
+<!-- index.html, in <body> -->
+<script type="text/jsx">
+  ...
+
+  function Header() {
+    // style added with `className` attribute
+    return <div className="title">
+      <h1>Hello World!</h1>
+    </div>
+  }
+
+  ...
+</script>
+```
+```css
+/* style.css */
+.title {
+  border-radius: 50%;
+}
 ```
 
 ### Props
@@ -107,21 +158,42 @@ User interfaces can change according to the state of the React component. Hooks 
 ```
 - Because changing state triggers re-rendering of the component, conflicting interactions between functions can take place. To skip unnecessary processes, `useEffect(()=>{}, [])` can be used.
 
-## Creating project
-Create a template React project.
+## Markup with JSX
+JSX (JavaScript XML) is a stricter writing style than HTML.
+- Tags needs to be closed (eg. `<div></div>`, or self-closing `<br />`).
+- Components can only return a single tag, usually wrapped into a shared parent, such as empty wrapper `<>...</>`.
+```jsx
+export default function App() {
+  return (
+    <>
+      <h1>Hello World!</h1>
+      <p>body text</p>
+    </>
+  )
+}
 ```
-$ npx create-react-app PROJECT_DIRECTORY
+
+JSX enables the markup to "escape back" into JavaScript using `{}`.
+```jsx
+export default function Profile() {
+  return (
+    <>
+      <img
+        className="style-for-profile"
+
+        // variable value
+        src={user.imageUrl}
+
+        // string concatenation
+        alt={'Profile image of ' + user.name}
+
+        // regular objects
+        style={{
+          width: user.imageSize,
+          height: user.imageSize,
+        }}
+      />
+    </>
+  )
+}
 ```
-Under PROJECT_DIRECTORY, files are set up automatically.
-```
-PROJECT_DIRECTORY
-  |- src/
-  |- public/
-  |- package.json
-  |- node_modules/
-  |- ...
-```
-- `src` directory, holds files in the unit of pages.
-- `public` directory, stores static assets including images, fonts and etc.
-- `package.json` file, is for recording dependencies.
-- `node_modules` directory, holds all dependencies.
