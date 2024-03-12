@@ -8,6 +8,9 @@
   - [Props](#props)
   - [State](#state)
 - [Markup with JSX](#markup-with-jsx)
+  - [Basics](#basics)
+  - [Exports and Imports](#exports-and-imports)
+- [Internal operation](#internal-operation)
 
 ## Creating project
 Create a template React project.
@@ -159,9 +162,11 @@ User interfaces can change according to the state of the React component. Hooks 
 - Because changing state triggers re-rendering of the component, conflicting interactions between functions can take place. To skip unnecessary processes, `useEffect(()=>{}, [])` can be used.
 
 ## Markup with JSX
-JSX (JavaScript XML) is a stricter writing style than HTML.
+### Basics
+JSX (JavaScript XML) is a syntax extension for JavaScript, enabling HTML-like markup. JSX is stricter than HTML and is able to display dynamic information.
 - Tags needs to be closed (eg. `<div></div>`, or self-closing `<br />`).
-- Components can only return a single tag, usually wrapped into a shared parent, such as empty wrapper `<>...</>`.
+- Components can only return a single tag, usually wrapped into a shared parent, such as empty wrapper `<>...</>` (fragment).
+- Properties should be written in cammel case.
 ```jsx
 export default function App() {
   return (
@@ -197,3 +202,34 @@ export default function Profile() {
   )
 }
 ```
+
+### Exports and Imports
+From JavaScript, there are 2 primary ways of exporting values: default exports and named exports. A single file can only have no more than 1 default exports, but can have multiple named exports.
+
+| Syntax | Export statement | Import statement |
+|--|--|--|
+| Default | `export default function Component() {}` | `import Comp from './Component.js';` |
+| Named | `export function Component() {}`| `import { Component } from './Component.js';` |
+
+Note that with default exports, any name can be given to the imported component.
+
+## Internal operation
+The process of requesting and serving UI is done in the following steps. This is done for a initial render, or due to state updates.
+
+1. triggering a render
+2. rendering the component
+3. committing to the DOM
+
+Initial renders is done by calling `render` method of `createRoot` value.
+```jsx
+import { createRoot } from "react-dom/client";
+
+const root = createRoot(document.getElementById("root"));
+root.render(<Component />);
+```
+
+| Step | Initial render | Re-render |
+| -- | -- | -- |
+| 1 | React calls the root component | React calls the function component of which the state has been updated |
+| 2 | React creates DOM nodes | React calculates properties that has changed |
+| 3 | React applies `appendChild()` DOM API to apply DOM nodes on screen | React applies the minimal necessary operations to match the latest DOM nodes |
