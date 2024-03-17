@@ -1,4 +1,11 @@
-# [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+# [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) <!-- omit in toc -->
+
+## Table of Content <!-- omit in toc -->
+- [Basic Syntax](#basic-syntax)
+- [Extended Syntax](#extended-syntax)
+- [Highlighted codes](#highlighted-codes)
+- [Math equations](#math-equations)
+- [Preview on VSCode](#preview-on-vscode)
 
 ## [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 Elements supported by all markdown applications.
