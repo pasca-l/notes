@@ -7,13 +7,11 @@
 - [Nesting Stacks](#nesting-stacks)
 - [Referencing values](#referencing-values)
 
-
 ## Recommended extensions for VSCode
 - [CloudFormation Linter](https://github.com/aws-cloudformation/cfn-lint)
   - `cfn-lint` or `cfn-python-lint` from pip, required
   - `pydot` from pip, not required
 - [CloudFormation](https://github.com/aws-scripting-guy/cform-VSCode)
-
 
 ## Create template
 To create a stack for AWS CloudFormation, the template should be given as a JSON or YAML text file. The template must have the [`Resources`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) top-level section.
@@ -85,7 +83,6 @@ Outputs:
       Name: !Sub "${AWS::StackName}-OUTPUT1"
 ```
 
-
 ## Nesting Stacks
 To create stacks with split file structure, [`AWS::CloudFormation::Stack`](https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) can be used to nest a stack as a resource.
 ```yaml
@@ -137,7 +134,6 @@ Resources:
     Properties:
       Tags: !Split [',', !Ref "<PARAM1>"]
 ```
-
 
 ## Referencing values
 - If using short form `!Sub`, short form `!ImportValue` cannot be used in YAML.

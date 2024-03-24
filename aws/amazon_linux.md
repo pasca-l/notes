@@ -3,7 +3,6 @@
 ## Table of Content <!-- omit in toc -->
 - [Extending Linux file system after resizing volume](#extending-linux-file-system-after-resizing-volume)
 
-
 ## [Extending Linux file system after resizing volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)
 After increasing the size of Amazon EBS (Elastic Block Store), the file system needs to be extended to use the volume.
 

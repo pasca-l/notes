@@ -3,7 +3,6 @@
 ## Table of Content <!-- omit in toc -->
 - [Read email from byte-like object](#read-email-from-byte-like-object)
 
-
 ## Read email from byte-like object
 ```python
 import email

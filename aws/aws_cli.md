@@ -13,7 +13,6 @@
   - [Login to Amazon ECR](#login-to-amazon-ecr)
   - [Deploy AWS CloudFormation stacks](#deploy-aws-cloudformation-stacks)
 
-
 ## Downloading and installing AWS CLI
 - On Ubuntu
 ```bash
@@ -28,7 +27,6 @@ $ curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 $ sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 
-
 ## Configure AWS
 - generate settings file using `aws configure`.
 
@@ -40,7 +38,6 @@ AWS Secret Access Key [None]: IAM_SECRET_ACCESS_KEY
 Default region name [None]: AWS_REGION
 Default output format [None]: [json, yaml, text, ...]
 ```
-
 
 ## Uploading files to Amazon S3
 1. Configure IAM role's policy. The given IAM role should be authorized to perform `CreateMultipartUpload` operation, with `s3:putObject` on target Amazon S3 bucket.
@@ -54,7 +51,6 @@ $ aws s3 cp FILES AMAZON_S3_URI
 ```bash
 $ aws s3 sync DIRECTORY AMAZON_S3_URI
 ```
-
 
 ## Uploading AWS Lambda code
 1. Configure IAM role's policy. The given IAM role should be authorized to perform `lambda:UpdateFunctionCode` on target AWS Lambda function.
@@ -72,7 +68,6 @@ $ aws lambda update-function-code --function-name AWS_LAMBDA_FUNCTION --zip-file
 $ aws lambda update-function-code --function-name AWS_LAMBDA_FUNCTION --image-uri AWS_ECR_URI
 ```
 
-
 ## Uploading AWS Lambda layer and attaching to AWS Lambda function
 1. Upload zipped code file (library source files) from S3 bucket to target AWS Lambda function layer.
 
@@ -88,7 +83,6 @@ $ aws lambda update-function-configuration --function-name AWS_LAMBDA_FUNCTION -
 
 - Layer version can be obtained from `aws lambda list-layer-versions --layer-name LAYER_NAME --query 'LayerVersions[0].LayerVersionArn'`
 
-
 ## Uploading Docker image to Amazon ECR
 1. Authenticate Docker client to Amazon ECR registry
 ```bash
@@ -101,7 +95,6 @@ $ docker build -t ECR_REPOSITORY .
 $ docker tag ECR_REPOSITORY:latest <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REPOSITORY>:latest
 $ docker push <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REPOSITORY>:latest
 ```
-
 
 ## Using on [GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 1. Add GitHub OIDC identity provider to IAM.

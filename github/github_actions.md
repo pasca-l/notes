@@ -7,7 +7,6 @@
 - [Triggering workflow manually](#triggering-workflow-manually)
 - [Deploying built application onto GitHub Pages](#deploying-built-application-onto-github-pages)
 
-
 ## Creating workflow
 > A workflow is a configurable automated process that will run one or more jobs.
 
@@ -54,7 +53,6 @@ jobs:
       run: echo "Running $RUNNER_OS!"
 ```
 
-
 ## Triggering workflow manually
 Use [`workflow_dispatch` trigger](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch), with custom inputs. Input values can be referenced from the `inputs.<name>` or `github.event.inputs.<name>` context property.
 ```yaml
@@ -71,7 +69,6 @@ on:
         #   - option1
         #   - option2
 ```
-
 
 ## Deploying built application onto GitHub Pages
 1. Upload [artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts) that can be deployed to GitHub Pages, using [official action](https://github.com/actions/upload-pages-artifact).

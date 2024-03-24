@@ -8,7 +8,6 @@
 - [List available packages](#list-available-packages)
 - [Creating `pyproject.toml` file](#creating-pyprojecttoml-file)
 
-
 ## Installing Poetry
 - With official installer
 1. Download and install with python3.7 and above.
@@ -46,7 +45,6 @@ $ pipx install poetry
 $ pipx upgrade poetry
 ```
 
-
 ## Installing dependencies
 - Resolves and installs dependencies from `pyproject.toml` from the project. If `poetry.lock` file present, exact dependency resolution will be used.
 ```bash
@@ -58,7 +56,6 @@ $ poetry install --with dev
 ```bash
 $ poetry add --group dev black
 ```
-
 
 ## Configuring Poetry
 Configuration file `config.toml` will be automatically created after running `poetry config` command, under `~/.config/pypoetry` on Unix.
@@ -82,13 +79,11 @@ virtualenvs.prompt = "{project_name}-py{python_version}"
 - If `virtualenvs.create` is `false`, and detects no enabled or existing virtual environment in `{cache-dir}/virtualenvs` or `{project-dir}/.venv`, Poetry will install dependencies into the python environment of the system.
   - For Docker containers that require dependencies on the python environment of the image, virtual environment should not be created.
 
-
 ## List available packages
 List all available packages, or pass the package name to show detail of a certain package.
 ```bash
 $ poetry show --tree
 ```
-
 
 ## Creating `pyproject.toml` file
 `pyproject.toml` should be prepared or created for the project.

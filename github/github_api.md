@@ -10,7 +10,6 @@
   - [Variables](#variables)
 - [Using on GitHub Actions](#using-on-github-actions)
 
-
 ## Authenticating to API
 One way of authenticating to the API is to use a personal access token.
 1. Under `Settings` > `Developer settings` > `Personal access tokens`, create the access token.

@@ -7,7 +7,6 @@
 - [Applying `.gitignore` afterwards](#applying-gitignore-afterwards)
 - [Force local repository update (on `main` branch)](#force-local-repository-update-on-main-branch)
 
-
 ## Installing git command
 - On Ubuntu
 ```
@@ -19,13 +18,11 @@ $ apt-get install git
 $ brew install git
 ```
 
-
 ## Change message after commit
 Changing commit message after a given commit.
 ```
 $ git commit --amend -m "COMMENT"
 ```
-
 
 ## Applying `.gitignore` afterwards
 Get certain file or directory out of repository.
@@ -38,7 +35,6 @@ Then, commit new file or directory, with the new `.gitignore` applied.
 $ git add .
 $ git commit -m "COMMENT"
 ```
-
 
 ## Force local repository update (on `main` branch)
 Fetch latest version of remote repository.

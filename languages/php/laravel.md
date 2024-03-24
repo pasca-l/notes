@@ -4,7 +4,6 @@
 - [Creating project](#creating-project)
 - [Serving the application](#serving-the-application)
 
-
 ## Creating project
 Create a template Laravel project.
 ```
@@ -34,7 +33,6 @@ APP_NAME
   |- vendor
   |- vite.config.js
 ```
-
 
 ## Serving the application
 Start a local development server using the `artisan serve` command.
