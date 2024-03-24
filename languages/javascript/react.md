@@ -1,4 +1,4 @@
-# React.js Cheat Sheet <!-- omit in toc -->
+# React Cheat Sheet <!-- omit in toc -->
 
 ## Table of Content <!-- omit in toc -->
 - [Creating project](#creating-project)
