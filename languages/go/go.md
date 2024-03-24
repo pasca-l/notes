@@ -8,7 +8,6 @@
 - [Reference documentation](#reference-documentation)
 - [Handling dependencies](#handling-dependencies)
 
-
 ## Formatting code
 Go contains a tool that automatically formats source code, according to the [official style guide](https://go.dev/doc/effective_go#formatting).
 ```bash
@@ -25,7 +24,6 @@ $ go fmt ./...
 $ gofmt SCRIPT
 ```
 
-
 ## Running code
 Compiling and then running executable file.
 ```bash
@@ -35,7 +33,6 @@ $ go run SCRIPT
 $ go build EXEC_FILE SCRIPT
 $ ./EXEC_FILE
 ```
-
 
 ## Testing code
 1. Create a test file with a name ending with "_test.go". These files will be excluded from regular package builds.
@@ -72,13 +69,11 @@ $ go test
 $ go test -v ./...
 ```
 
-
 ## Reference documentation
 Show documentation of packages, identifiers, or methods.
 ```bash
 $ go doc PACKAGE.IDENTIFIER.METHOD
 ```
-
 
 ## Handling dependencies
 1. Initialize `go mod`, which creates `go.mod` and `go.sum` files.

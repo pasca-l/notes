@@ -7,7 +7,6 @@
 - [Starting emulation](#starting-emulation)
 - [Using on GitHub Actions](#using-on-github-actions)
 
-
 ## Preparing Flutter
 Use `flutter doctor` command to check software prerequisite.
 ```
@@ -29,7 +28,6 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 • No issues found!
 ```
-
 
 ## Creating project
 Create a template Flutter project.
@@ -104,7 +102,6 @@ export 'package:flutter/material.dart';
 import 'package:APP_NAME/importer.dart';
 ```
 
-
 ## Starting emulation
 Open iOS emulator from Simulator application (by Finder).
 ```
@@ -128,7 +125,6 @@ Select device and run a Flutter app.
 ```
 $ flutter run -d DEVICE_NAME
 ```
-
 
 ## Using on GitHub Actions
 - Use [`flutter-action`](https://github.com/subosito/flutter-action), to use `flutter` commands.
