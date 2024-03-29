@@ -5,7 +5,7 @@
 - [Start hosting application](#start-hosting-application)
 
 ## Creating project
-Create a template React project.
+Create a template React Native project using Expo tools (Expo app).
 ```
 $ npx create-expo-app PROJECT_DIRECTORY
 ```
