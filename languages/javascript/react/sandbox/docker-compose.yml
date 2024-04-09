@@ -5,6 +5,9 @@ services:
     build: .
     volumes:
       - ./app/:/home/local/app/
+      # packages are installed while image build
+      # node_modules are kept in volumes, which are prioritized over bind mounts
+      - node_modules:/home/local/app/node_modules
     ports:
       - "3000:3000"
     stdin_open: true
@@ -13,3 +16,6 @@ services:
       sh -c "
         npm start
       "
+
+volumes:
+  node_modules:

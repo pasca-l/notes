@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:20.11.0-bookworm-slim
+FROM node:20.11.0-bookworm-slim
 
 ENV HOME /home/local/app/
 WORKDIR /home/local/app/
@@ -16,3 +16,4 @@ RUN apt-get update && apt-get upgrade -y
 # use of yarn, for "faster and more reliable dependency management"
 RUN yarn add expo
 # `yarn create expo-app APP_NAME`, to create new app
+RUN yarn install

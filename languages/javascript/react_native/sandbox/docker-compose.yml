@@ -5,9 +5,13 @@ services:
     build: .
     volumes:
       - ./app/:/home/local/app/
+      - node_modules:/home/local/app/node_modules
     stdin_open: true
     tty: true
     ports:
       - 8081:8081
     command: >
       sh -c "yarn expo start"
+
+volumes:
+  node_modules:
