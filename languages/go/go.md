@@ -2,11 +2,18 @@
 [^document]: [Official document reference](https://go.dev/doc/)
 
 ## Table of Content <!-- omit in toc -->
+- [Initializing project](#initializing-project)
 - [Formatting code](#formatting-code)
 - [Running code](#running-code)
 - [Testing code](#testing-code)
 - [Reference documentation](#reference-documentation)
 - [Handling dependencies](#handling-dependencies)
+
+## Initializing project
+1. Choose a module path and create a `go.mod` file that declares it.
+```bash
+$ go mod init github.com/GITHUB_USERNAME/PROJECT_NAME
+```
 
 ## Formatting code
 Go contains a tool that automatically formats source code, according to the [official style guide](https://go.dev/doc/effective_go#formatting).
