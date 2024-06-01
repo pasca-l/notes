@@ -1,15 +1,11 @@
-version: '3'
+version: "3"
 
 services:
   go:
     build: .
     volumes:
-      - ./src/:/home/local/src/
-    # ports:
-    #   - "8888:8888"
+      - ./app/:/home/local/app/
     stdin_open: true
     tty: true
-    # command: >
-    #   sh -c "
-    #     go run main.go
-    #   "
+    command: >
+      sh -c "air"
