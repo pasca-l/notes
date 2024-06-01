@@ -1,8 +1,10 @@
-version: '3'
+version: "3"
 
 services:
   react:
     build: .
+    depends_on:
+      - modules
     volumes:
       - ./app/:/home/local/app/
       # packages are installed while image build
@@ -12,10 +14,26 @@ services:
       - "3000:3000"
     stdin_open: true
     tty: true
-    command: >
-      sh -c "
-        npm start
-      "
+    # command: >
+    #   sh -c "
+    #     npm start
+    #   "
+
+  # container to create an empty node_modules at host
+  modules:
+    image: alpine:3.20.0
+    volumes:
+      - ./app/node_modules:/home/local/app/node_modules
 
 volumes:
   node_modules:
+    # installations of node_modules in volumes, are not shown to the host
+    driver: local
+    driver_opts:
+      # - tmpfs type, uses fast operating host memory as file system
+      # - btrfs (B-TRee File System) type, uses fault tolerant file system
+      # - nfs type, uses networking protocol for distributed file sharing
+      # - none type, uses no physical disk partition linked to mount point
+      type: none
+      o: bind
+      device: ${PWD}/app/node_modules
