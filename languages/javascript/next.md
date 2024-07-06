@@ -17,13 +17,15 @@ $ npx create-next-app PROJECT_DIRECTORY
 Under PROJECT_DIRECTORY, files are set up automatically.
 ```
 PROJECT_DIRECTORY
-  |- pages/
+  |- app/ (or pages/)
   |- public/
   |- package.json
   |- node_modules/
   |- ...
 ```
-- `pages` directory, holds files in the unit of pages. `index.tsx` is initially read. Pages are mapped to `/PAGE_NAME`.
+- `app` directory, using the App Router (recommended from version 13), holds set of special files to create UI with specific behavior in nested routes. The most common are `pages.tsx` to show UI unique to a route, and `layout.tsx` to show UI shared across multiple routes.
+  - `pages` directory, using the Pages Router, holds files in the unit of pages. `index.tsx` is initially read, and pages are mapped to `/PAGE_NAME`.
+  - The App Router takes priority over the Pages Router.
 - `public` directory, stores static assets including images, fonts and etc. Files inside are referenced from the base URL (`/`).
 - `package.json` file, is for recording dependencies.
 - `node_modules` directory, holds all dependencies required for Next.js.
