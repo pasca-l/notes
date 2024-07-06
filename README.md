@@ -1,7 +1,7 @@
-# notes
+# Notes
 This repository holds my notes, to reference and update while working with my projects and learnings.
 
-Directories are listed below:
+## Directories
 - languages
   - contains basic information about how to write code in that language, and about language specific libraries.
 - algorithm
