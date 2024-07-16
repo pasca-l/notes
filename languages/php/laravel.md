@@ -1,6 +1,6 @@
 # Laravel Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating project](#creating-project)
 - [Serving the application](#serving-the-application)
 

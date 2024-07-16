@@ -1,7 +1,7 @@
 # Poetry Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document references](https://python-poetry.org/docs/)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Installing Poetry](#installing-poetry)
 - [Installing dependencies](#installing-dependencies)
 - [Configuring Poetry](#configuring-poetry)

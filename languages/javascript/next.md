@@ -1,6 +1,6 @@
 # Next.js Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating project](#creating-project)
 - [Start hosting website](#start-hosting-website)
 - [Using Next.js](#using-nextjs)

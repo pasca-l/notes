@@ -1,7 +1,7 @@
 # Piet Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document reference](https://www.dangermouse.net/esoteric/piet.html)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [test](#test)
 
 

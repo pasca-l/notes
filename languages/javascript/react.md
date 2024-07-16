@@ -1,6 +1,6 @@
 # React Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating project](#creating-project)
 - [Adding TypeScript to existing project](#adding-typescript-to-existing-project)
 - [Using React](#using-react)

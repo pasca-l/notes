@@ -1,6 +1,6 @@
 # Amazon Linux Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Extending Linux file system after resizing volume](#extending-linux-file-system-after-resizing-volume)
 
 ## [Extending Linux file system after resizing volume](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)

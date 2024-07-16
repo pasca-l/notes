@@ -1,6 +1,6 @@
 # FastAPI Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating web API with FastAPI](#creating-web-api-with-fastapi)
 - [CORS settings](#cors-settings)
 

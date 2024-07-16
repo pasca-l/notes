@@ -1,7 +1,7 @@
 # AWS CloudFormation Cheat Sheet [^userguide] <!-- omit in toc -->
 [^userguide]: [Official user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Recommended extensions for VSCode](#recommended-extensions-for-vscode)
 - [Create template](#create-template)
 - [Nesting Stacks](#nesting-stacks)

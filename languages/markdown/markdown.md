@@ -1,6 +1,6 @@
 # [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Basic Syntax](#basic-syntax)
 - [Extended Syntax](#extended-syntax)
 - [Highlighted codes](#highlighted-codes)

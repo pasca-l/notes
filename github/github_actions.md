@@ -1,7 +1,7 @@
 # GitHub Actions Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document references](https://docs.github.com/en/actions)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating workflow](#creating-workflow)
 - [Using variables and context](#using-variables-and-context)
 - [Triggering workflow manually](#triggering-workflow-manually)

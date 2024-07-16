@@ -1,7 +1,7 @@
 # GitHub API Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document references](https://docs.github.com/en/graphql)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Authenticating to API](#authenticating-to-api)
 - [Communicating with GraphQL API](#communicating-with-graphql-api)
   - [GraphQL API endpoint](#graphql-api-endpoint)

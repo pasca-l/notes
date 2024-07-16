@@ -1,7 +1,7 @@
 # Go Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document reference](https://go.dev/doc/)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Initializing project](#initializing-project)
 - [Formatting code](#formatting-code)
 - [Running code](#running-code)

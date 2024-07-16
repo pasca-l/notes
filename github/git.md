@@ -1,7 +1,7 @@
 # Git command Cheat Sheet [^document] <!-- omit in toc -->
 [^document]: [Official document references](https://git-scm.com/docs)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Installing git command](#installing-git-command)
 - [Change message after commit](#change-message-after-commit)
 - [Applying `.gitignore` afterwards](#applying-gitignore-afterwards)

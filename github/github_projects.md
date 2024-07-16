@@ -1,6 +1,6 @@
 # GitHub Projects Cheat Sheet [^document] <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Automating Projects](#automating-projects)
   - [Automatically add issues on Projects](#automatically-add-issues-on-projects)
 

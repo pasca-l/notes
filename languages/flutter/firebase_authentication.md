@@ -1,6 +1,6 @@
 # Firebase Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Email and password authentication](#email-and-password-authentication)
 - [Accessing authenticated user](#accessing-authenticated-user)
 

@@ -1,6 +1,6 @@
 # React Native Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating project](#creating-project)
 - [Start hosting application](#start-hosting-application)
 - [Building application](#building-application)

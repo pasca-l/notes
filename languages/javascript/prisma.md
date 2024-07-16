@@ -1,6 +1,6 @@
 # Prisma Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Setting up](#setting-up)
 - [Creating database schema](#creating-database-schema)
   - [Running on specific platform](#running-on-specific-platform)

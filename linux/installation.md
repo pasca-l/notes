@@ -1,6 +1,6 @@
 # Linux Installation Cheat Sheet <!-- omit in toc -->
 
-## Table of content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Creating a bootable USB stick](#creating-a-bootable-usb-stick)
   - [On any OS](#on-any-os)
   - [On Ubuntu](#on-ubuntu)

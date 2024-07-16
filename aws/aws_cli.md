@@ -2,7 +2,7 @@
 [^userguide]: [Official user guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 [^document]: [Official document references](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Downloading and installing AWS CLI](#downloading-and-installing-aws-cli)
 - [Configure AWS](#configure-aws)
 - [Uploading files to Amazon S3](#uploading-files-to-amazon-s3)

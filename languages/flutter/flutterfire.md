@@ -1,7 +1,7 @@
 # FlutterFire Cheat Sheet [^overview] <!-- omit in toc -->
 [^overview]: [FlutterFire Overview website](https://firebase.flutter.dev/docs/overview/)
 
-## Table of content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Adding Firebase to application](#adding-firebase-to-application)
 - [Adding Firebase Authentication](#adding-firebase-authentication)
 - [Adding Cloud Firestore](#adding-cloud-firestore)

@@ -1,6 +1,6 @@
 # Linux Setting Cheat Sheet <!-- omit in toc -->
 
-## Table of content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Permission settings](#permission-settings)
   - [Manage group member](#manage-group-member)
 - [SSH server setup](#ssh-server-setup)

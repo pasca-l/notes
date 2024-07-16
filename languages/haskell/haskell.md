@@ -1,6 +1,6 @@
 # Haskell Cheat Sheet <!-- omit in toc -->
 
-## Table of content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Installing Haskell](#installing-haskell)
 - [Using GHCi](#using-ghci)
 - [Making a new project](#making-a-new-project)

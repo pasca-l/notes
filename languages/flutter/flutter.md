@@ -1,6 +1,6 @@
 # Flutter Cheat Sheet <!-- omit in toc -->
 
-## Table of Content <!-- omit in toc -->
+## Table of Contents <!-- omit in toc -->
 - [Preparing Flutter](#preparing-flutter)
 - [Creating project](#creating-project)
   - [Customizing directory structure](#customizing-directory-structure)
