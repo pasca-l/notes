@@ -1,8 +1,6 @@
 import random
 
 def binary_search(data, value):
-    print(f"Finding {value} from {data}.")
-
     # initialize boundary to search from
     left = 0
     right = len(data) - 1
@@ -29,6 +27,7 @@ def main():
     # data must be sorted beforehand
     data.sort()
     value = random.randint(0, 100)
+    print(f"Finding {value} from {data}.")
 
     if binary_search(data, value) == None:
         print("Value not found in data.")

@@ -1,7 +1,6 @@
 import random
 
 def linear_search(data, value):
-    print(f"Finding {value} from {data}.")
     for i in range(len(data)):
         if data[i] == value:
             return i
@@ -11,6 +10,7 @@ def linear_search(data, value):
 def main():
     data = [random.randint(0, 100) for _ in range(10)]
     value = random.randint(0, 100)
+    print(f"Finding {value} from {data}.")
 
     if linear_search(data, value) == None:
         print("Value not found in data.")
