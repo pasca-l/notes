@@ -1,6 +1,11 @@
 # Piet basics <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [Overview](#overview)
+- [Language concepts](#language-concepts)
+- [Program execution](#program-execution)
+- [Syntax elements](#syntax-elements)
+- [Reference](#reference)
 
 ## Overview
 Piet is one of an esoteric programming language, which the program code is in the form of abstract art. It is one of a stack-oriented programming language.
