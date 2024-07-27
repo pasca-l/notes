@@ -2,8 +2,10 @@
 [^document]: [Official document reference](https://www.dangermouse.net/esoteric/piet.html)
 
 ## Table of Contents <!-- omit in toc -->
-- [test](#test)
+- [Running the Piet interpreter](#running-the-piet-interpreter)
 
-
-## test
-[Reference](https://ymos-hobby-programing.hatenablog.com/entry/2021/09/01/233312)
+## Running the Piet interpreter
+Run the source script (png image) using the Piet interpreter.
+```bash
+$ piet FILE.png
+```

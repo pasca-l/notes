@@ -39,6 +39,15 @@ White color blocks are "free" zones, which the interpreter can pass unhindered. 
 
 Commands are defined by the transition of color, and the number of steps along the hue cycle and lightness cycle in each transition determines the command to be executed (no command is executed when transition happens via slide across a white color block).
 
+| | 0 lightness | 1 lightness | 2 lightness |
+| --- | --- | --- | --- |
+| 0 hue | - | push | pop |
+| 1 hue | add | subtract | multiply |
+| 2 hue | divide | mod | not |
+| 3 hue | greater | pointer | switch |
+| 4 hue | duplicate | roll | STDIN (number) |
+| 5 hue | STDIN (char) | STDOUT (number) | STDOUT (char) |
+
 | commands | description |
 | --- | --- |
 | push | pushes the value of the color block just exited on to the stack |
@@ -56,3 +65,6 @@ Commands are defined by the transition of color, and the number of steps along t
 | roll | pops the two values off the stack, the top value defines the number of roll, and the second top value is the depth which the remaining top value gets pushed into |
 | in | reads value from STDIN as either a number or character |
 | out | pops the top value off the stack and prints it to STDOUT as either a number or character |
+
+## Reference
+- [Blog with diagrams](https://ymos-hobby-programing.hatenablog.com/entry/2021/09/01/233312)
