@@ -9,6 +9,7 @@
   - [Mutations](#mutations)
   - [Variables](#variables)
 - [Using on GitHub Actions](#using-on-github-actions)
+  - [Using github-script](#using-github-script)
 
 ## Authenticating to API
 One way of authenticating to the API is to use a personal access token.
@@ -138,4 +139,22 @@ jobs:
             repo: ${{ github.event.repository.name }}
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+```
+
+### Using github-script
+[github-script](https://github.com/actions/github-script) allows an action to be executed from a script, using GitHub API provided by [octokit/rest.js](https://octokit.github.io/rest.js/v20) (GitHub API client for Node.js), and the workflow run context.
+
+1. Use official action.
+```yaml
+jobs:
+  githubScript:
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/github-script@v7
+      script: |
+        github.rest.repos.[...]({
+          owner: context.repo.owner,
+          repo: context.repo.repo,
+          ...,
+        })
 ```
