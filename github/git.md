@@ -5,7 +5,8 @@
 - [Installing git command](#installing-git-command)
 - [Change message after commit](#change-message-after-commit)
 - [Applying `.gitignore` afterwards](#applying-gitignore-afterwards)
-- [Force local repository update (on `main` branch)](#force-local-repository-update-on-main-branch)
+- [Change base branch](#change-base-branch)
+- [Force local repository update](#force-local-repository-update)
 
 ## Installing git command
 - On Ubuntu
@@ -19,30 +20,36 @@ $ brew install git
 ```
 
 ## Change message after commit
-Changing commit message after a given commit.
+1. Changing commit message after a given commit.
 ```
 $ git commit --amend -m "COMMENT"
 ```
 
 ## Applying `.gitignore` afterwards
-Get certain file or directory out of repository.
+1. Get certain file or directory out of repository.
 ```
 $ git rm --cached (-r) FILE/(DIRECTORY)
 ```
 
-Then, commit new file or directory, with the new `.gitignore` applied.
+2. Commit new file or directory, with the new `.gitignore` applied.
 ```
 $ git add .
 $ git commit -m "COMMENT"
 ```
 
-## Force local repository update (on `main` branch)
-Fetch latest version of remote repository.
+## Change base branch
+1. Having `BRANCH` with base branch `UPSTREAM`, changing `BRANCH` to work from `NEWBASE`.
 ```
-$ git fetch origin main
+$ git rebase --onto NEWBASE UPSTREAM BRANCH
 ```
 
-Then, reset local `main` to latest remote `main`. Note that with `--hard`, commit history in worktree and index will be deleted on local.
+## Force local repository update
+1. Fetch latest version of remote repository.
 ```
-$ git reset --hard origin/main
+$ git fetch origin BRANCH
+```
+
+2. Reset local `BRANCH` to latest remote `BRANCH`. Note that with `--hard`, commit history in worktree and index will be deleted on local.
+```
+$ git reset --hard origin/BRANCH
 ```
