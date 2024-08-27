@@ -65,7 +65,7 @@ $ npx prisma studio
 
 ## Seeding the database
 To configure seeding in the project, `prisma.seed` property needs to be added to the dependencies.
-1. Add the following to `package.json`.
+1. Add the following to `package.json`. (When using Next.js, the compiler option is necessary.)
 ```json
 "prisma": {
   "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -75,4 +75,9 @@ To configure seeding in the project, `prisma.seed` property needs to be added to
 2. Install the required dependencies.
 ```
 $ npm install ts-node typescript @types/node --save-dev
+```
+
+3. Run the seeding script.
+```
+$ npx prisma db seed
 ```
