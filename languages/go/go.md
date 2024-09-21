@@ -18,7 +18,7 @@ $ go mod init github.com/GITHUB_USERNAME/PROJECT_NAME
 ## Formatting code
 Go contains a tool that automatically formats source code, according to the [official style guide](https://go.dev/doc/effective_go#formatting).
 ```bash
-$ go fmt SCRIPT
+$ go fmt SCRIPT.go
 ```
 
 - To format all source code under the project.
@@ -28,16 +28,16 @@ $ go fmt ./...
 
 - To see the formatted result at the standard output. This is equivalent to `gofmt -l -w`.
 ```bash
-$ gofmt SCRIPT
+$ gofmt SCRIPT.go
 ```
 
 ## Running code
 Compiling and then running executable file.
 ```bash
-$ go run SCRIPT
+$ go run SCRIPT.go
 
 # if separating the two actions
-$ go build EXEC_FILE SCRIPT
+$ go build EXEC_FILE SCRIPT.go
 $ ./EXEC_FILE
 ```
 
