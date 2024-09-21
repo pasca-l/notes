@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  zig:
+    build: .
+    volumes:
+      - ./app/:/home/local/app/
+    stdin_open: true
+    tty: true
