@@ -19,6 +19,12 @@ Contains basic information about how to write code in that language, and about l
   <a href="https://github.com/pasca-l/notes/tree/main/languages/haskell">
     <img src="https://github.com/devicons/devicon/blob/master/icons/haskell/haskell-original.svg" title="Haskell" alt="Haskell" width="40" height="40"/>
   </a>
+  <a href="https://github.com/pasca-l/notes/tree/main/languages/nim">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/nim/nim-original.svg" title="Nim" alt="Nim" width="40" height="40"/>
+  </a>
+  <a href="https://github.com/pasca-l/notes/tree/main/languages/zig">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/zig/zig-original.svg" title="Zig" alt="Zig" width="40" height="40"/>
+  </a>
   <a href="https://github.com/pasca-l/notes/tree/main/languages/php">
     <img src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg" title="Php" alt="Php" width="40" height="40"/>
   </a>
