@@ -1,4 +1,5 @@
 # referenced "Nim Tutorial (Part 1)" (https://nim-lang.org/docs/tut1.html)
+# and a little bit of "Nim Tutorial (Part 2)" about pragmas and templates
 
 # comments can be written with a single `#`
 #[
@@ -171,3 +172,22 @@ from mymodule as m import x, z # importing some symbols, with aliasing
 
 # `include` statement can be used to split up large modules into files
 include fileA, fileB, fileC
+
+# pragmas give the compiler additional information or command,
+# and written with enclosed `{.` and `.}`
+# available pragmas at: https://nim-lang.org/docs/manual.html#pragmas
+
+# templates are simple substitution mechanism that operates on the syntax tree
+# templates are especially useful for lazy evaluation purposes
+const
+    debug = true
+
+template log(msg: string) =
+    if debug: stdout.writeLine(msg)
+
+var
+    x = 4
+
+# if `proc` is used instead, even when `debug=false`, the procedure is called,
+# resulting in unnecessary argument evaluation (`$` and `&` are quite expensive)
+log("x has value: " & $x)
