@@ -8,10 +8,11 @@
 - [Using Axios in project](#using-axios-in-project)
   - [Calling API inside of Docker network](#calling-api-inside-of-docker-network)
 - [Using NextAuth.js in project](#using-nextauthjs-in-project)
+- [Using Firebase in project](#using-firebase-in-project)
 
 ## Creating project
 Create a template Next.js project (initialized as TypeScript project).
-```
+```bash
 $ npx create-next-app PROJECT_DIRECTORY
 ```
 Under PROJECT_DIRECTORY, files are set up automatically.
@@ -32,7 +33,7 @@ PROJECT_DIRECTORY
 
 ## Start hosting website
 Run on the development server on `http://localhost:3000`.
-```
+```bash
 $ npm run dev
 ```
 
@@ -44,7 +45,7 @@ As Next.js is the framework of React, the following are unnecessary:
 
 ## Using Prisma in project
 1. Install Prisma Client in the project to access the database. When the Prisma schema file is changed, Prisma Client also needs to be updated.
-```
+```bash
 $ npm install @prisma/client
 $ npx prisma generate
 ```
@@ -59,7 +60,7 @@ export const prisma = new PrismaClient();
 ## Using Axios in project
 > HTTP requests can also be done with the browser's standard library `fetch` function. `fetch` function does not return an error when given back HTTP status code that is out of 200 range. This allows `then` method to run.
 1. Install Axios in the project to make HTTP requests.
-```
+```bash
 $ npm install axios
 ```
 
@@ -105,7 +106,7 @@ As default, due to security reasons, the browser follows the Same-Origin Policy,
 
 ## Using NextAuth.js in project
 1. Install [NextAuth.js](https://next-auth.js.org/) in the project as an authentication solution.
-```
+```bash
 $ npm install next-auth
 ```
 
@@ -160,3 +161,23 @@ export default function Component() {
   )
 }
 ```
+
+## Using Firebase in project
+1. Install Firebase JS SDK and Firebase CLI
+```bash
+$ npm install firebase
+$ npm install -g firebase-tools
+```
+
+2. Login to Firebase using Google account.
+```bash
+$ firebase login
+```
+- Authentication is done from port `9005`.
+- `--no-localhost` option can be used for remote machines that does not have access to localhost.
+
+3. Set up Firebase project.
+```bash
+$ firebase init
+```
+- Modifications to any configurations, such as to rules, can be updated with `firebase deploy`.
