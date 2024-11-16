@@ -1,0 +1,16 @@
+{
+  "name": "VSCode Rust development environment inside docker container",
+
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "rust",
+  "workspaceFolder": "/home/local/app/",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // rust-analyzer fails to fetch workspace, when Cargo.toml cannot be found at root of the project directory
+        "rust-lang.rust-analyzer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# ignored by Cargo
+/target
+
+# ignore all files, other than source code
+src/*
+!*.rs
