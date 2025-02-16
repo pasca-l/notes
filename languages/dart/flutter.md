@@ -6,9 +6,10 @@
   - [Customizing directory structure](#customizing-directory-structure)
 - [Starting emulation](#starting-emulation)
 - [Using on GitHub Actions](#using-on-github-actions)
+- [Install onto local physical device (iOS)](#install-onto-local-physical-device-ios)
 
 ## Preparing Flutter
-Use `flutter doctor` command to check software prerequisite.
+1. Use `flutter doctor` command to check software prerequisite.
 ```
 $ flutter doctor
 ```
@@ -30,7 +31,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 ```
 
 ## Creating project
-Create a template Flutter project.
+1. Create a template Flutter project.
 ```
 $ flutter create APP_NAME
 ```
@@ -103,12 +104,12 @@ import 'package:APP_NAME/importer.dart';
 ```
 
 ## Starting emulation
-Open iOS emulator from Simulator application (by Finder).
+1. Open iOS emulator from Simulator application (by Finder).
 ```
 $ open -a Simulator
 ```
 
-Check devices available.
+2. Check devices available.
 ```
 $ flutter devices
 ```
@@ -121,13 +122,13 @@ Chrome (web)       • chrome                               • web-javascript �
 Google Chrome 101.0.4951.54
 ```
 
-Select device and run a Flutter app.
+3. Select device and run a Flutter app.
 ```
 $ flutter run -d DEVICE_NAME
 ```
 
 ## Using on GitHub Actions
-- Use [`flutter-action`](https://github.com/subosito/flutter-action), to use `flutter` commands.
+1. Use [`flutter-action`](https://github.com/subosito/flutter-action), to use `flutter` commands.
 ```yaml
 env:
   app_root: <APP_ROOT>
@@ -152,3 +153,30 @@ jobs:
         run: |
           flutter build web --base-href /${{ env.repo_name }}/
 ```
+
+## Install onto local physical device (iOS)
+1. Install flutter, cocoapods, and xcode onto Mac (using Homebrew).
+```bash
+$ brew install --cask flutter
+$ brew install cocoapods
+
+# install xcode via mas, specifing app id
+$ brew install mas
+$ mas install 497799835 # xcode
+```
+
+2. Open `Runner.xcworkspace` on xcode, and set development team and bundle identifier.
+```bash
+$ open app/ios/Runner.xcworkspace
+```
+- xcode needs support for some iOS needs to be downloaded, in order to run the scheme
+- development team and bundle identifier can be updated at *Targets ("Runner") > Signing & Capabilities*
+
+3. Run the flutter app with the attached physical device.
+```bash
+# from iOS14+, the app cannot be opened from home in debug mode
+# `flutter devices` shows device ids
+$ flutter run --release -d DEVICE_ID
+```
+- for iOS 16 or later, the physical device requires to enable `Developer Mode`, which can be set under *Settings > Privacy & Security > Developer Mode*
+- to open the installed app, the app developer is required to be trusted, which can be set under *Settings > General > VPN & Device Management*
