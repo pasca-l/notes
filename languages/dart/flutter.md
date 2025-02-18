@@ -7,6 +7,7 @@
 - [Starting emulation](#starting-emulation)
 - [Using on GitHub Actions](#using-on-github-actions)
 - [Install onto local physical device (iOS)](#install-onto-local-physical-device-ios)
+- [References](#references)
 
 ## Preparing Flutter
 1. Use `flutter doctor` command to check software prerequisite.
@@ -180,3 +181,6 @@ $ flutter run --release -d DEVICE_ID
 ```
 - for iOS 16 or later, the physical device requires to enable `Developer Mode`, which can be set under *Settings > Privacy & Security > Developer Mode*
 - to open the installed app, the app developer is required to be trusted, which can be set under *Settings > General > VPN & Device Management*
+
+## References
+- [Google Fonts, and Icons](https://fonts.google.com/)
