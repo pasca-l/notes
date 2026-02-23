@@ -1,0 +1,7 @@
+services:
+  linux:
+    build: .
+    # adds capabilities to allow running certain commands (eg. `unshare`)
+    privileged: true
+    stdin_open: true
+    tty: true
