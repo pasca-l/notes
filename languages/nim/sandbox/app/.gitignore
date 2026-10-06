@@ -1,3 +1,0 @@
-# all files, other than source code, as compiled file gets generated
-src/*
-!*.nim
