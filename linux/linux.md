@@ -1,13 +1,21 @@
-# Linux Setting Cheat Sheet <!-- omit in toc -->
+# Linux Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [Creating a bootable USB stick](#creating-a-bootable-usb-stick)
+- [Installing Ubuntu](#installing-ubuntu)
 - [Permission settings](#permission-settings)
   - [Manage group member](#manage-group-member)
 - [SSH server setup](#ssh-server-setup)
 - [Alias settings](#alias-settings)
-  - [On zsh](#on-zsh)
-  - [On bash](#on-bash)
 
+## Creating a bootable USB stick
+- For any OS, download and use [balenaEtcher](https://www.balena.io/etcher).
+- On Ubuntu, use "Startup Disk Creator", which is installed as default in Ubuntu.
+
+## Installing Ubuntu
+1. Download Ubuntu ISO file image from the [official website](https://ubuntu.com/download).
+2. [Create bootable USB stick](#creating-a-bootable-usb-stick).
+3. Insert USB stick into the desired PC and boot.
 
 ## Permission settings
 ### Manage group member
@@ -40,7 +48,7 @@ $ sudo systemctl status ssh
 $ sudo systemctl is-enabled ssh
 ```
 
-1. Check firewall.
+3. Check firewall.
 - If `active`, firewall is enabled.
   - `sudo ufw enable` for enabling.
   - `sudo ufw disable` for disabling.
@@ -53,28 +61,12 @@ $ sudo ufw allow [portnum]
 ```
 
 ## Alias settings
-### On zsh
-Aliases put in `~/.zshrc`.
+1. Add the following setting for aliases, in any settings file such as `~/.zshrc`, `~/.bashrc`.
 ```sh
 alias "ALIAS"="COMMAND"
 ```
 
-To apply change:
-- Restart zsh.
-- Reflect settings by command.
+2. Apply the change made.
 ```
-$ source ~/.zshrc
-```
-
-### On bash
-Aliases put in `~/.bashrc`.
-```sh
-alias "ALIAS"="COMMAND"
-```
-
-To apply change:
-- Restart bash, under condition of changes loaded by `~/.bash_profile`.
-- Reflect settings by command.
-```
-$ source ~/.bashrc
+$ source SETTINGS_FILE
 ```
