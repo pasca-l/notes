@@ -1,14 +1,18 @@
-# [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) <!-- omit in toc -->
+# Markdown Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Basic Syntax](#basic-syntax)
 - [Extended Syntax](#extended-syntax)
 - [Highlighted codes](#highlighted-codes)
 - [Math equations](#math-equations)
 - [Preview on VSCode](#preview-on-vscode)
 
-## [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
-Elements supported by all markdown applications.
+## References
+- [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
+## Basic Syntax
+Elements supported by all markdown applications, using [basic syntax](https://www.markdownguide.org/basic-syntax/).
 
 | Syntax | Code | View |
 | --- | --- | --- |
@@ -23,8 +27,8 @@ Elements supported by all markdown applications.
 | Link | \[TEXT\]\(https://www.markdownguide.org\) | [TEXT](https://www.markdownguide.org) |
 | Image | !\[TEXT\]\(https://www.markdownguide.org\) | ![TEXT](https://www.markdownguide.org/assets/images/tux.png) |
 
-## [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
-Elements extended from basic syntax, not supported by all markdown applications.
+## Extended Syntax
+Elements extended from basic syntax ([extended syntax](https://www.markdownguide.org/extended-syntax/)), not supported by all markdown applications.
 
 | Syntax | Code | View |
 | --- | --- | --- |
@@ -40,13 +44,13 @@ Elements extended from basic syntax, not supported by all markdown applications.
 [^1]: Footnote
 
 ## Highlighted codes
-python code
 ```python
+# python code
 print("hello, world!")
 ```
 
-javascript code
 ```javascript
+// javascript code
 console.log("hello, world!");
 ```
 

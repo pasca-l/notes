@@ -1,13 +1,16 @@
-# Go Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document reference](https://go.dev/doc/)
+# Go Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Initializing project](#initializing-project)
 - [Formatting code](#formatting-code)
 - [Running code](#running-code)
 - [Testing code](#testing-code)
 - [Reference documentation](#reference-documentation)
 - [Handling dependencies](#handling-dependencies)
+
+## References
+- [Official document reference](https://go.dev/doc/)
 
 ## Initializing project
 1. Choose a module path and create a `go.mod` file that declares it.

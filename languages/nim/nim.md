@@ -1,16 +1,11 @@
-# Nim Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document reference](https://nim-lang.org/documentation.html)
+# Nim Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
-- [Installing Nim](#installing-nim)
+- [References](#references)
 - [Running code](#running-code)
 
-## Installing Nim
-1. Install Nim (using Homebrew) [^installation].
-```
-$ brew install nim
-```
-[^installation]: [Installing Nim](https://nim-lang.org/install_unix.html)
+## References
+- [Official document reference](https://nim-lang.org/documentation.html)
 
 ## Running code
 Compiling and then running executable file.

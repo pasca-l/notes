@@ -1,19 +1,14 @@
-# Zig Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document reference](https://ziglang.org/)
+# Zig Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
-- [Installing Zig](#installing-zig)
+- [References](#references)
 - [Formatting code](#formatting-code)
 - [Running code](#running-code)
 - [Testing code](#testing-code)
 - [Generating document](#generating-document)
 
-## Installing Zig
-1. Install Zig (using Homebrew) [^installation].
-```
-$ brew install zig
-```
-[^installation]: [Installing Zig](https://zig.guide/getting-started/installation)
+## References
+- [Official document reference](https://ziglang.org/)
 
 ## Formatting code
 Zig contains a tool that automatically formats source code, including re-encoding the file to UTF-8 as the Zig comipler does not support other encodings.

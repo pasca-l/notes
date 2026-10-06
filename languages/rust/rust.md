@@ -1,10 +1,13 @@
-# Rust Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document reference](https://doc.rust-lang.org/reference/index.html)
+# Rust Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Initializing project](#initializing-project)
 - [Running code](#running-code)
 - [Formatting code](#formatting-code)
+
+## References
+- [Official document reference](https://doc.rust-lang.org/reference/index.html)
 
 ## Initializing project
 Creating a new Cargo package.
