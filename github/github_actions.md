@@ -1,11 +1,14 @@
-# GitHub Actions Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document references](https://docs.github.com/en/actions)
+# GitHub Actions Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Creating workflow](#creating-workflow)
 - [Using variables and context](#using-variables-and-context)
 - [Triggering workflow manually](#triggering-workflow-manually)
 - [Deploying built application onto GitHub Pages](#deploying-built-application-onto-github-pages)
+
+## References
+- [Official document references](https://docs.github.com/en/actions)
 
 ## Creating workflow
 > A workflow is a configurable automated process that will run one or more jobs.

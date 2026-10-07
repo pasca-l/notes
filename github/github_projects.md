@@ -1,8 +1,12 @@
-# GitHub Projects Cheat Sheet [^document] <!-- omit in toc -->
+# GitHub Projects Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Automating Projects](#automating-projects)
   - [Automatically add issues on Projects](#automatically-add-issues-on-projects)
+
+## References
+- [Official document references](https://docs.github.com/en/issues/planning-and-tracking-with-projects)
 
 ## Automating Projects
 ### Automatically add issues on Projects

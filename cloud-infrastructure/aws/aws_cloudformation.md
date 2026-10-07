@@ -1,11 +1,14 @@
-# AWS CloudFormation Cheat Sheet [^userguide] <!-- omit in toc -->
-[^userguide]: [Official user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
+# AWS CloudFormation Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Recommended extensions for VSCode](#recommended-extensions-for-vscode)
 - [Create template](#create-template)
 - [Nesting Stacks](#nesting-stacks)
 - [Referencing values](#referencing-values)
+
+## References
+- [Official user guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
 ## Recommended extensions for VSCode
 - [CloudFormation Linter](https://github.com/aws-cloudformation/cfn-lint)

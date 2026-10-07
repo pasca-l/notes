@@ -1,7 +1,7 @@
-# GitHub API Cheat Sheet [^document] <!-- omit in toc -->
-[^document]: [Official document references](https://docs.github.com/en/graphql)
+# GitHub API Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Authenticating to API](#authenticating-to-api)
 - [Communicating with GraphQL API](#communicating-with-graphql-api)
   - [GraphQL API endpoint](#graphql-api-endpoint)
@@ -10,6 +10,9 @@
   - [Variables](#variables)
 - [Using on GitHub Actions](#using-on-github-actions)
   - [Using github-script](#using-github-script)
+
+## References
+- [Official document references](https://docs.github.com/en/graphql)
 
 ## Authenticating to API
 One way of authenticating to the API is to use a personal access token.

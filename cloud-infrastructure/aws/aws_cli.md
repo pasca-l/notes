@@ -1,8 +1,7 @@
-# AWS CLI Cheat Sheet [^userguide] [^document] <!-- omit in toc -->
-[^userguide]: [Official user guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
-[^document]: [Official document references](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)
+# AWS CLI Cheat Sheet <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
+- [References](#references)
 - [Downloading and installing AWS CLI](#downloading-and-installing-aws-cli)
 - [Configure AWS](#configure-aws)
 - [Uploading files to Amazon S3](#uploading-files-to-amazon-s3)
@@ -12,6 +11,10 @@
 - [Using on GitHub Actions](#using-on-github-actions)
   - [Login to Amazon ECR](#login-to-amazon-ecr)
   - [Deploy AWS CloudFormation stacks](#deploy-aws-cloudformation-stacks)
+
+## References
+- [Official user guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
+- [Official document references](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)
 
 ## Downloading and installing AWS CLI
 - On Ubuntu
